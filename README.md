@@ -204,13 +204,61 @@ The control logic is modeled using a two-level GRAFCET to ensure deterministic a
 ```text
 smart-soja/
 │
+├── README.md                  # Présentation du projet
+├── LICENSE
+├── .gitignore
+│
 ├── docs/
+│   ├── 01-project-overview.md
+│   ├── 02-system-architecture.md
+│   ├── 03-hardware-design.md
+│   ├── 04-mechanical-design.md
+│   ├── 05-software-architecture.md
+│   ├── 06-energy-system.md
+│   ├── 07-testing-validation.md
+│   ├── 08-results.md
+│   ├── 09-future-improvements.md
+│   └── images/
+│
 ├── firmware/
+│   ├── esp32/
+│   │   ├── src/
+│   │   ├── include/
+│   │   ├── lib/
+│   │   └── platformio.ini
+│   │
+│   └── simulation/
+│
 ├── hardware/
+│   ├── schematics/
+│   ├── pcb/
+│   ├── wiring/
+│   ├── bom/
+│   └── datasheets/
+│
 ├── mechanical/
+│   ├── solidworks/
+│   ├── stl/
+│   ├── drawings/
+│   └── renders/
+│
 ├── cloud/
+│   ├── mqtt/
+│   ├── database/
+│   └── dashboard/
+│
 ├── media/
-└── research/
+│   ├── prototype/
+│   ├── screenshots/
+│   ├── diagrams/
+│   └── videos/
+│
+├── research/
+│   ├── references/
+│   └── standards/
+│
+└── .github/
+    └── ISSUE_TEMPLATE/
 ```
 
 ---
