@@ -1,10 +1,37 @@
+<div align="center">
+
+<img src="docs/images/logo.png" alt="SMART-SOJA logo" width="260"/>
+
 # 🌱 SMART-SOJA
 
-> **An Autonomous IoT-Based Mobile Soybean Pre-processing System**
+### An Autonomous IoT-Based Mobile Soybean Pre-processing System
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
+![Status](https://img.shields.io/badge/Status-Functional%20Prototype-f6c343.svg)
+![Platform](https://img.shields.io/badge/Platform-ESP32-3c3c3c.svg?logo=espressif&logoColor=white)
+![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-e6522c.svg)
+[![Repo size](https://img.shields.io/github/repo-size/virgile-tchidehou/smart-soja.svg?color=blue)](https://github.com/virgile-tchidehou/smart-soja)
+[![Last commit](https://img.shields.io/github/last-commit/virgile-tchidehou/smart-soja.svg)](https://github.com/virgile-tchidehou/smart-soja/commits/main)
+
+![SolidWorks](https://img.shields.io/badge/CAD-SolidWorks-e2231a.svg)
+![KiCad](https://img.shields.io/badge/EDA-KiCad-1ba94c.svg)
+![Firebase](https://img.shields.io/badge/Cloud-Firebase-ffca28.svg?logo=firebase&logoColor=white)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933.svg?logo=node.js&logoColor=white)
+![MQTT](https://img.shields.io/badge/IoT-MQTT-660066.svg)
+
+**[Documentation](#-documentation) · [Architecture](#️-system-architecture) · [Hardware](#️-hardware-overview) · [Roadmap](#-project-roadmap)**
+
+</div>
+
+---
 
 SMART-SOJA is an engineering project that aims to improve soybean post-harvest processing through an autonomous, mobile and connected pre-processing unit.
 
 Designed for rural environments, the system combines embedded systems, industrial automation, IoT technologies and renewable energy to automate critical operations such as cleaning, moisture analysis, drying, weighing and digital traceability.
+
+<div align="center">
+<img src="docs/images/smart-soja-hero.png" alt="SMART-SOJA prototype — assembled 3D view" width="640"/>
+</div>
 
 ---
 
@@ -318,16 +345,27 @@ Future versions will integrate:
 
 ---
 
+<div align="center">
+
 # 👨‍💻 Author
 
 **Dodji Virgile TCHIDEHOU**
 
 Industrial Computing & Maintenance Engineer
-
 Embedded Systems • IoT • Robotics • Intelligent Systems
+
+[![GitHub](https://img.shields.io/badge/GitHub-virgile--tchidehou-181717.svg?logo=github&logoColor=white)](https://github.com/virgile-tchidehou)
+
+</div>
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+<div align="center">
+
+This project is licensed under the [MIT License](LICENSE).
+
+**🌱 SMART-SOJA — from the field to the factory, one certified batch at a time.**
+
+</div>
