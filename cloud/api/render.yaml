@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: smartsoja-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 3000
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false # À configurer manuellement dans le dashboard Render
+      - key: VITE_FIREBASE_DATABASE_URL
+        fromConfig: true
+      - key: BACKEND_URL
+        fromConfig: true
+      # Ajoutez ici les autres variables MQTT nécessaires
+    buildFilter:
+      ignoredPaths:
+        - memoire/**
+        - smartsoja_platform/**

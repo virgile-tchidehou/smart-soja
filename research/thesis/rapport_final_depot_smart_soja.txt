@@ -1,0 +1,871 @@
+
+============================================================
+ PAGE 1
+============================================================
+Université Catholique de l’Afrique de l’Ouest
+École de Génie Électrique et Informatique – EGEI
+Rapport final de vérification page par page
+avec autorisation de dépôt sous réserve des dernières corrections
+Mémoire examiné
+Conception et réalisation d’une unité mobile, autonome et connectée de pré-traitement du soja :
+Projet SMART-SOJA BÉNIN
+Présenté par :
+Elisa Christelle LOKO et Dodji Virgile TCHIDEHOU
+Niveau :
+Licence Professionnelle
+Filière :
+Informatique Industrielle et Maintenance
+Organisme d’accueil :
+QOTTO Bénin
+Encadreur :
+Dr DIDAVI K. B. Audace, Enseignant
+Encadrantes techniques :
+Mme AHISSOU Kyrielle et Mme SOSSOUKPE Carine
+Session :
+Juin 2026
+Objet :
+Vérification finale des corrections et autorisation de
+dépôt administratif et scientifique.
+Rapport adressé aux étudiants pour intégration des dernières corrections avant dépôt
+28 mai 2026
+
+============================================================
+ PAGE 2
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Table des matières
+1
+Décision finale de l’encadreur
+2
+2
+Vérification des corrections demandées
+2
+3
+Corrections obligatoires avant dépôt
+3
+3.1
+Correction de la page de garde
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+3.2
+Correction des remerciements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+3.3
+Correction des éléments provisoires « XX » . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+3.4
+Correction des renvois d’annexes
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+3.5
+Correction typographique des résultats numériques . . . . . . . . . . . . . . . . . . . . . .
+4
+4
+Vérification de l’introduction générale
+5
+5
+Vérification du résumé, de l’abstract et de la conclusion
+5
+5.1
+Résumé
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+5.2
+Abstract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+5.3
+Conclusion générale
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+6
+Vérification page par page
+5
+7
+Liste finale des corrections à intégrer avant dépôt
+9
+8
+Conclusion du rapport final
+9
+1/9
+
+============================================================
+ PAGE 3
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+1. Décision finale de l’encadreur
+Après vérification complète de votre mémoire corrigé, je constate une amélioration nette par rapport
+aux versions précédentes. Le document est désormais organisé autour des trois chapitres attendus, le
+chapitre des résultats a été renforcé par des mesures chiffrées, le cahier des charges a été intégré, la
+bibliographie est plus consistante et les annexes techniques appuient mieux la conception du prototype.
+Décision : je vous donne mon autorisation de dépôt, sous réserve de l’intégration stricte des dernières
+corrections indiquées dans le présent rapport. Cette autorisation ne signifie pas que le document ne
+comporte plus aucune erreur. Elle signifie que le mémoire a atteint un niveau globalement acceptable
+pour le dépôt, à condition que les corrections obligatoires ci-dessous soient exécutées avant transmission
+de la version administrative finale.
+Avis final : dépôt autorisé sous réserve. Les dernières corrections portent principalement sur
+les éléments provisoires encore visibles, la hiérarchie des remerciements, quelques formulations,
+les renvois d’annexes, les valeurs manquantes dans le protocole expérimental et la correction
+typographique de certains résultats numériques.
+2. Vérification des corrections demandées
+Point vérifié
+Constat final
+Décision / correction res-
+tante
+Structure du mémoire
+La structure en trois chapitres
+est maintenant respectée : dé-
+roulement du stage ; étude de
+la solution proposée ; résultats,
+analyse et discussion.
+Validé. Conserver cette organi-
+sation.
+Page de garde
+La page de garde est nettement
+améliorée. L’encadreur est dé-
+sormais indiqué comme Dr DI-
+DAVI K. B. Audace.
+Corriger la formulation en : Dr
+DIDAVI K. B. Audace, En-
+seignant. Éviter toute mention
+non confirmée de grade supé-
+rieur.
+Sommaire et table des matières
+Le sommaire est placé au début
+et la table des matières détaillée
+est placée à la fin.
+Validé. Cela peut être conservé
+si ce format correspond aux
+consignes de l’université.
+Remerciements
+Les noms réels sont maintenant
+intégrés. Cependant, l’ordre hié-
+rarchique doit être mieux res-
+pecté.
+À corriger avant dépôt. Re-
+prendre l’ordre : responsables
+institutionnels, responsables de
+l’école, enseignants, maître de
+mémoire, encadrantes et struc-
+ture de stage, partenaires, jury,
+camarades, familles.
+Résumé et abstract
+Les deux résumés présentent le
+contexte, la méthodologie, le
+prototype et les principaux ré-
+sultats chiffrés.
+Validé, mais corriger les es-
+paces dans les valeurs numé-
+riques : 98,4 %, 11,5 %, 19,8
+min, 0,09 %, 3,5 h.
+Introduction générale
+Les parties attendues appa-
+raissent : contexte, justification,
+problématique, objectif général,
+objectifs spécifiques, méthodo-
+logie et annonce du plan.
+Validé.
+Corriger
+seulement
+quelques lourdeurs et vérifier
+l’harmonisation de « Internet
+des objets ».
+2/9
+
+============================================================
+ PAGE 4
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Chapitre 1
+Le stage est maintenant mieux
+relié au projet SMART-SOJA.
+Les activités réalisées et les com-
+pétences acquises sont mieux
+présentées.
+Validé. Corriger quelques for-
+mulations et préciser les fonc-
+tions exactes des encadrantes.
+Chapitre 2
+Le chapitre contient maintenant
+le contexte, l’état de l’art, le ca-
+hier des charges, les choix tech-
+niques, le dimensionnement et
+la conception.
+Validé. Corriger les mauvais
+renvois d’annexes et annon-
+cer plus clairement certaines fi-
+gures.
+Chapitre 3
+Les résultats sont maintenant
+chiffrés et reliés au cahier des
+charges.
+À
+corriger
+avant
+dépôt.
+Remplacer
+impérativement
+toutes les mentions « XX »
+dans le protocole et dans le
+tableau de synthèse.
+Figures et tableaux
+Les listes sont cohérentes et la
+plupart des figures sont annon-
+cées.
+Validéavec
+corrections
+mi-
+neures : éviter les figures trop
+décoratives et commenter les
+figures de résultats.
+Bibliographie et webographie
+La bibliographie a été ren-
+forcée
+par
+des
+articles,
+ou-
+vrages, normes et documents
+techniques.
+Validé. Vérifier l’uniformité du
+style et l’exactitude des liens
+web.
+Annexes
+Les annexes appuient correcte-
+ment les matériaux, le schéma
+électronique, le routage PCB,
+les vues 3D et l’alimentation.
+Validé. Corriger les renvois du
+texte principal vers les annexes.
+3. Corrections obligatoires avant dépôt
+3.1. Correction de la page de garde
+Sur la page de garde, la formulation de l’encadrement doit être administrative, sobre et exacte. Je
+vous demande d’utiliser la forme suivante :
+Sous la direction de :
+Dr DIDAVI K. B. Audace, Enseignant
+Co-encadré par :
+Mme AHISSOU Kyrielle
+Mme SOSSOUKPE Carine
+Encadrantes techniques à QOTTO Bénin
+Évitez toute formulation imprécise ou non confirmée. Le nom de l’encadreur ne doit pas être abrégé
+en « Dr DIDAVI Audace » dans une partie et écrit autrement dans une autre. La forme à conserver dans
+tout le document est : Dr DIDAVI K. B. Audace, Enseignant.
+3.2. Correction des remerciements
+Vos remerciements sont maintenant rédigés avec des noms réels, mais l’ordre doit être plus académique.
+Vous devez éviter de commencer par le jury avant les responsables de l’institution et les personnes ayant
+encadré le travail. L’ordre recommandé est le suivant :
+1. responsables de l’Université Catholique de l’Afrique de l’Ouest et de l’UCAO-UUC ;
+2. responsables de l’École de Génie Électrique et Informatique ;
+3. corps enseignant, technique et administratif ;
+3/9
+
+============================================================
+ PAGE 5
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+4. maître de mémoire ;
+5. responsables et encadrantes de QOTTO Bénin ;
+6. partenaires techniques de Sèmè City Open Park ;
+7. membres du jury ;
+8. camarades de promotion ;
+9. familles et proches.
+Formulation recommandée à intégrer :
+Au terme de ce mémoire de fin de cycle, nous exprimons notre profonde gratitude à toutes les
+personnes qui ont contribué, de près ou de loin, à l’aboutissement de ce travail. Nous remercions
+d’abord les autorités de l’Université Catholique de l’Afrique de l’Ouest, de l’UCAO-UUC et de
+l’École de Génie Électrique et Informatique pour le cadre de formation mis à notre disposition.
+Nous adressons également nos remerciements à l’ensemble du corps enseignant, technique et
+administratif pour la qualité de l’encadrement reçu tout au long de notre parcours.
+Nous remercions particulièrement Dr DIDAVI K. B. Audace, notre maître de mémoire, pour
+sa disponibilité, ses orientations scientifiques, ses conseils et sa rigueur dans le suivi de ce
+travail. Nos remerciements vont aussi à Mme ALAHASSA Gwladys, Directrice Générale
+de QOTTO Bénin, ainsi qu’à Mme AHISSOU Kyrielle et Mme SOSSOUKPE Carine, nos
+encadrantes techniques, pour leur accompagnement, leur disponibilité et l’appui apporté à la
+réalisation du prototype.
+Nous remercions également le personnel de QOTTO Bénin, les responsables et techniciens de
+Sèmè City Open Park ayant facilité certaines opérations de fabrication, les membres du jury
+pour l’honneur qu’ils nous font en acceptant d’évaluer ce travail, nos camarades de promotion
+pour leur collaboration, ainsi que nos familles respectives pour leur soutien constant et leurs
+sacrifices.
+3.3. Correction des éléments provisoires « XX »
+Les mentions « XX » sont encore présentes dans le chapitre des résultats. Elles doivent disparaître
+avant dépôt. Un document destiné à l’administration ou au jury ne doit contenir aucun champ provisoire.
+Les corrections obligatoires concernent notamment :
+— la période exacte des essais expérimentaux ;
+— la provenance exacte du soja utilisé ;
+— la masse totale de soja testée et la masse de chaque lot ;
+— la température et l’humidité relative mesurées ;
+— la référence exacte de la balance de précision ;
+— la référence exacte de l’hygromètre utilisé ;
+— le temps réel de réponse de l’arrêt d’urgence dans le tableau de synthèse.
+3.4. Correction des renvois d’annexes
+Plusieurs passages du chapitre 2 renvoient à « Annexe 3.8.3 », ce qui n’est pas une annexe. Il faut
+remplacer ces renvois par les intitulés corrects :
+— « voir Annexe B » pour le schéma électronique global ;
+— « voir Annexe C » pour le routage PCB ;
+— « voir Annexe D » pour les vues 3D du circuit imprimé ;
+— « voir Annexe E » pour le synoptique de l’alimentation électrique.
+3.5. Correction typographique des résultats numériques
+Dans le résumé, le chapitre 3 et la conclusion, certaines valeurs apparaissent avec un espace après la
+virgule décimale. Il faut écrire :
+4/9
+
+============================================================
+ PAGE 6
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+À éviter
+À écrire
+98, 4 %
+98,4 %
+11, 5 %
+11,5 %
+19, 8 min
+19,8 min
+0, 09 %
+0,09 %
+3, 5 h
+3,5 h
+4. Vérification de l’introduction générale
+L’introduction générale est globalement recevable. Les différentes parties attendues apparaissent
+clairement :
+— Contexte général : qualité du soja, exigences de transformation industrielle et limites des pratiques
+rurales de post-récolte ;
+— Justification : nécessité d’une unité mobile de nettoyage, séchage, pesée et traçabilité ;
+— Ancrage du stage : développement du projet dans l’environnement de QOTTO Bénin ;
+— Problématique : formulée sous forme de question claire ;
+— Objectif général : cohérent avec le sujet ;
+— Objectifs spécifiques : limités à trois et rédigés avec des verbes d’action ;
+— Méthodologie : étapes essentielles indiquées ;
+— Annonce du plan : organisation en trois chapitres présentée.
+La seule amélioration attendue consiste à alléger quelques phrases et à ajouter, si possible, une ou
+deux citations dans le contexte introductif pour appuyer les données relatives aux pertes post-récolte et
+aux exigences de qualité de la filière soja.
+5. Vérification du résumé, de l’abstract et de la conclusion
+5.1. Résumé
+Le résumé est nettement meilleur que dans les versions précédentes. Il présente le contexte, le problème,
+la méthode, les principaux composants du prototype et les résultats chiffrés. Il est donc acceptable. Les
+corrections restantes sont typographiques : valeurs décimales, espaces avant les unités et cohérence des
+mots-clés.
+5.2. Abstract
+L’abstract est cohérent avec le résumé français. Il reprend les performances expérimentales et expose
+clairement la contribution du projet. Il faut simplement veiller à la cohérence de la ponctuation anglaise
+et à l’écriture des unités : « 98.4% », « 11.5% », « 19.8 minutes », « 0.09% » et « 3.5 hours ».
+5.3. Conclusion générale
+La conclusion générale est structurée et reprend correctement le problème de départ, la solution
+développée, les résultats, les limites et les perspectives. Elle peut être conservée. Je vous demande
+cependant de rester prudents dans les formulations : il faut éviter de donner l’impression que le prototype
+est déjà industrialisable. Vous devez préciser qu’il constitue une preuve de concept techniquement
+prometteuse, à valider en conditions réelles sur des quantités plus importantes.
+6. Vérification page par page
+5/9
+
+============================================================
+ PAGE 7
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Page
+Partie
+Constat de vérification
+Dernière correction deman-
+dée
+1
+Page de garde
+La page est complète et la présentation
+générale est correcte. Les encadrantes
+techniques sont maintenant identifiées.
+Écrire partout : « Dr DIDAVI K.
+B. Audace, Enseignant ». Ajouter
+une virgule avant « Enseignant ».
+Harmoniser « UCAO-UUC » si
+l’affiliation est conservée.
+2
+Sommaire
+Le sommaire est clair et conforme au
+format avec table des matières détaillée
+placée en fin de mémoire.
+Mettre « Conclusion générale »
+avec une minuscule à « générale
+».
+3
+Dédicace 1
+Texte acceptable et plus soigné.
+Relire la ponctuation finale et
+conserver une mise en page sobre.
+4
+Dédicace 2
+Texte acceptable.
+Aucun changement majeur.
+5
+Remerciements
+Les noms réels sont présents, mais l’ordre
+hiérarchique n’est pas encore idéal.
+Reprendre selon l’ordre recom-
+mandé : institution, école, ensei-
+gnants, maître de mémoire, struc-
+ture et encadrantes, partenaires,
+jury, camarades, familles.
+6
+Sigles et abréviations
+Liste utile et globalement cohérente.
+Vérifier les coupures de mots dues
+à la justification ; ajouter éven-
+tuellement CAO, HR, TGX et
+SCOP si ces sigles restent utilisés.
+7
+Sigles et abréviations
+Suite correcte.
+Harmoniser « Internet des objets
+» dans le texte courant.
+8
+Table des figures
+Numérotation cohérente.
+Vérifier que chaque figure est bien
+annoncée avant son apparition.
+9
+Table des figures
+Suite correcte, annexes listées.
+Rien de bloquant.
+10
+Liste des tableaux
+Liste cohérente et enrichie par les ta-
+bleaux de résultats.
+Vérifier que tous les tableaux sont
+commentés dans le texte.
+11
+Résumé
+Résumé complet avec résultats chiffrés.
+Corriger les espaces dans les déci-
+males : 98,4 %, 11,5 %, 19,8 min,
+0,09 %, 3,5 h.
+12
+Abstract
+Cohérent avec le résumé français.
+Uniformiser les unités et la ponc-
+tuation anglaise.
+13
+Introduction
+Contexte, justification, stage, probléma-
+tique et objectif général présents.
+Ajouter éventuellement une cita-
+tion sur les pertes post-récolte et
+les exigences qualité.
+14
+Introduction
+Objectifs spécifiques, méthodologie et an-
+nonce du plan présents.
+Corriger les coupures de mots
+et maintenir trois objectifs spé-
+cifiques.
+15
+Chapitre 1
+Introduction du chapitre et présentation
+de QOTTO bien rédigées.
+Ajouter une source si les informa-
+tions historiques de QOTTO sont
+maintenues.
+16
+Chapitre 1
+Fiche signalétique et logo correctement
+présentés.
+Vérifier l’exactitude des informa-
+tions administratives.
+17
+Chapitre 1
+Organigramme annoncé et commenté.
+Missions du stage mieux reliées au pro-
+jet.
+Corriger « notre maître de stage
+» si deux encadrantes sont men-
+tionnées.
+18
+Chapitre 1
+Déroulement des activités bien détaillé.
+Figure 1.3 utile.
+Vérifier que les étapes de la chaîne
+QOTTO sont correctement ortho-
+graphiées.
+19
+Chapitre 1
+Activités de laboratoire et RD bien re-
+liées au projet.
+Rien de bloquant.
+20
+Chapitre 1
+Compétences acquises et difficultés bien
+présentées.
+Corriger les éventuelles coupures
+typographiques.
+21
+Chapitre 2
+Introduction du chapitre et contexte de
+la filière soja pertinents.
+Ajouter une citation pour la des-
+cription agronomique si néces-
+saire.
+22
+Chapitre 2
+Enjeux qualitatifs et norme NB 01.07.004
+mieux intégrés.
+Vérifier l’exactitude de la norme
+citée et sa date.
+6/9
+
+============================================================
+ PAGE 8
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Page
+Partie
+Constat de vérification
+Dernière correction deman-
+dée
+23
+Chapitre 2
+Tableau comparatif utile ; technologies
+de tri introduites.
+Commenter
+davantage
+le
+ta-
+bleau 2.1 en explicitant pourquoi
+SMART-SOJA répond mieux au
+besoin.
+24
+Chapitre 2
+État de l’art industriel et trieur optique
+bien situés.
+Ajouter la source exacte de la fi-
+gure 2.3 si elle n’est pas originale.
+25
+Chapitre 2
+IoT, LPWAN, MQTT et traçabilité in-
+troduits.
+Ajouter une référence technique
+pour MQTT/LPWAN dans le pa-
+ragraphe, pas seulement en biblio-
+graphie.
+26
+Chapitre 2
+Cahier des charges principal bien struc-
+turé.
+Conserver les critères de vérifica-
+tion ; vérifier que chaque fonction
+est évaluée au chapitre 3.
+27
+Chapitre 2
+Fonctions contraintes clairement présen-
+tées.
+Rien de bloquant.
+28
+Chapitre 2
+Architecture système bien expliquée et
+figure lisible.
+Corriger la qualité graphique si
+l’image d’origine est trop basse
+résolution.
+29
+Chapitre 2
+ESP32 et justification du choix bien dé-
+veloppés.
+Ajouter une référence directe à la
+datasheet dans le texte.
+30
+Chapitre 2
+Capteurs présentés avec rôle, précision
+et limites.
+Vérifier la terminologie « HR »
+et expliquer clairement la calibra-
+tion des sondes capacitives.
+31
+Chapitre 2
+Actionneurs et interface de puissance
+bien justifiés.
+S’assurer que la puissance de 175
+W associée au MOSFET n’est
+pas présentée comme puissance
+consommée du prototype.
+32
+Chapitre 2
+IHM et traçabilité locale bien présentées.
+Rien de bloquant.
+33
+Chapitre 2
+Dimensionnement énergétique pertinent.
+Remplacer « Annexe 3.8.3 » par
+« Annexe E ».
+34
+Chapitre 2
+Calcul batterie/panneau clair et exploi-
+table.
+Vérifier la cohérence entre auto-
+nomie théorique du chapitre 2 et
+autonomie mesurée du chapitre
+3.
+35
+Chapitre 2
+Architecture mécanique et matériaux
+bien justifiés.
+Remplacer tout renvoi incorrect
+d’annexe par Annexe A ou D se-
+lon le cas.
+36
+Chapitre 2
+FreeRTOS bien expliqué et tableau de
+priorités utile.
+Rien de bloquant.
+37
+Chapitre 2
+Chronogramme commenté.
+S’assurer que la figure 2.10 reste
+lisible à l’impression.
+38
+Chapitre 2
+GRAFCET et logique d’humidité bien
+expliqués.
+Rien de bloquant.
+39
+Chapitre 2
+Communication MQTT et JSON intro-
+duites.
+Vérifier que la ligne coupée «
+Store-and- » ne nuit pas à la lec-
+ture dans la version finale.
+40
+Chapitre 2
+Écosystème logiciel et début PCB.
+Remplacer « Annexe 3.8.3 » par
+« Annexe B » pour le schéma élec-
+tronique global.
+41
+Chapitre 2
+Zones du PCB bien décrites.
+Ajouter un espace avant « et »
+dans « 10 kWet » ; corriger la ty-
+pographie.
+42
+Chapitre 2
+Routage et modélisation 3D expliqués.
+Remplacer les renvois génériques
+par Annexe C et Annexe D.
+43
+Chapitre 2
+Architecture mécanique bien détaillée.
+Rien de bloquant.
+44
+Chapitre 2
+Figures de CAO utiles.
+S’assurer que les figures sont d’ori-
+gine ou correctement référencées
+si elles ne le sont pas.
+45
+Chapitre 2
+Mise en plan et début firmware.
+Rien de bloquant.
+7/9
+
+============================================================
+ PAGE 9
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Page
+Partie
+Constat de vérification
+Dernière correction deman-
+dée
+46
+Chapitre 2
+Tableau FreeRTOS visible mais chargé.
+Vérifier l’alignement du tableau
+et éviter les coupures gênantes.
+47
+Chapitre 2
+JSON de traçabilité présenté.
+S’assurer que l’exemple JSON est
+cohérent avec les données réelles
+du chapitre 3.
+48
+Chapitre 2
+Plateforme web et pipeline MQTT bien
+décrits.
+Rien de bloquant.
+49
+Chapitre 2
+Interfaces web et synthèse du chapitre.
+Ajouter une phrase de transition
+plus directe vers les essais expéri-
+mentaux.
+50
+Chapitre 3
+Début des résultats et protocole. Pré-
+sence de plusieurs champs « XX ».
+Correction impérative : remplacer
+toutes les valeurs « XX » par les
+données réelles avant dépôt.
+51
+Chapitre 3
+Déroulement des essais et résultats de
+nettoyage.
+Vérifier que les masses des lots
+sont cohérentes avec les valeurs
+indiquées à la page 50.
+52
+Chapitre 3
+Résultats de séchage bien présentés.
+Corriger les décimales si elles ap-
+paraissent avec un espace après
+la virgule.
+53
+Chapitre 3
+Résultats de pesée et énergie.
+Vérifier l’unité et la cohérence
+entre autonomie estimée et ten-
+sion finale batterie.
+54
+Chapitre 3
+Traçabilité MQTT, mais mention « XX
+ms » visible.
+Remplacer « XX ms » par le
+temps réel mesuré. Correction
+obligatoire.
+55
+Chapitre 3
+Interfaces exploitant et industrie bien
+illustrées.
+Commenter davantage les figures
+3.1 et 3.2 en lien avec la traçabi-
+lité.
+56
+Chapitre 3
+Tableau de conformité très utile.
+Remplacer « XX ms » dans FC2 ;
+ne pas conserver une ligne incom-
+plète dans un tableau final.
+57
+Chapitre 3
+Discussion et limites bien formulées.
+Insister sur le caractère prototype
+et sur la nécessité de tests terrain
+à plus grande échelle.
+58
+Conclusion
+Conclusion globale satisfaisante.
+Corriger la casse : « Conclusion
+générale ». Maintenir la prudence
+sur l’industrialisation.
+59
+Conclusion
+Perspectives pertinentes.
+Conserver les trois axes : terrain,
+industrialisation, fonctionnalités.
+60
+Bibliographie
+Bibliographie améliorée et références
+scientifiques présentes.
+Uniformiser le style bibliogra-
+phique et vérifier les liens.
+61
+Bibliographie
+Suite de la bibliographie.
+Rien de bloquant.
+62
+Bibliographie
+Datasheets et références techniques pré-
+sentes.
+Vérifier les dates et liens des da-
+tasheets.
+63
+Webographie
+Webographie séparée et utile.
+Conserver, mais distinguer claire-
+ment bibliographie scientifique et
+sources web.
+64
+Annexes
+Page d’ouverture des annexes.
+Acceptable.
+65
+Annexe A
+Matériaux bien illustrés.
+Ajouter une source si les images
+ne sont pas des photos originales.
+66
+Annexe B
+Schéma électronique global utile.
+Vérifier la lisibilité du schéma
+dans la version imprimée.
+67
+Annexe C
+Routage PCB utile.
+Rien de bloquant.
+68
+Annexe D
+Vues 3D du PCB utiles.
+Rien de bloquant.
+69
+Annexe E
+Synoptique alimentation pertinent.
+Vérifier que le texte ne dépasse
+pas et que tous les blocs sont li-
+sibles.
+70
+Table des matières
+Table détaillée en fin de document.
+Conforme si c’est le format de
+l’université ; ne pas déplacer.
+8/9
+
+============================================================
+ PAGE 10
+============================================================
+Rapport final de vérification - SMART-SOJA
+Autorisation de dépôt
+Page
+Partie
+Constat de vérification
+Dernière correction deman-
+dée
+71
+Table des matières
+Suite de la table.
+Rien de bloquant.
+72
+Table des matières
+Fin de la table.
+Rien de bloquant.
+7. Liste finale des corrections à intégrer avant dépôt
+1. Corriger la page de garde avec la formulation exacte : Dr DIDAVI K. B. Audace, Enseignant.
+2. Reprendre les remerciements selon l’ordre hiérarchique recommandé.
+3. Supprimer toutes les mentions provisoires « XX » dans le chapitre 3.
+4. Remplacer « XX ms » par la valeur réelle du temps de réponse de sécurité dans les pages 54 et 56.
+5. Corriger les renvois « Annexe 3.8.3 » par les annexes réelles A, B, C, D ou E.
+6. Corriger les valeurs décimales mal espacées : 98,4 %, 11,5 %, 19,8 min, 0,09 %, 3,5 h.
+7. Vérifier la cohérence entre les conditions expérimentales, les masses des lots, les résultats et la synthèse
+de conformité.
+8. Harmoniser la casse des titres : « Introduction générale », « Conclusion générale », « Internet des
+objets ».
+9. S’assurer que toutes les figures importantes sont annoncées et commentées, surtout celles du chapitre
+3.
+10. Relire une dernière fois la bibliographie, les liens web et les sources des figures.
+8. Conclusion du rapport final
+Chers étudiants, votre mémoire a connu une amélioration significative. Les principales observations
+formulées dans les précédentes corrections ont été prises en compte : le plan a été restructuré, le stage est
+mieux relié au projet, le cahier des charges est intégré, les choix techniques sont justifiés, les résultats
+sont chiffrés et les annexes appuient désormais la réalisation.
+Il reste néanmoins quelques corrections obligatoires, principalement des éléments provisoires et des
+ajustements de forme. Ces corrections ne remettent pas en cause la qualité globale du travail, mais elles
+doivent être intégrées avant dépôt afin d’éviter qu’un document contenant des mentions « XX » ou des
+renvois erronés soit transmis à l’administration et au jury.
+Avis final de l’encadreur : le dépôt du mémoire est autorisé, sous réserve de l’intégration complète
+des corrections listées dans ce rapport.
+Dr DIDAVI K. B. Audace
+Enseignant
+Maître de mémoire
+9/9

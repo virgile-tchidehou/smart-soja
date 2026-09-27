@@ -19,6 +19,7 @@ Designed for rural environments, the system combines embedded systems, industria
 - Software Architecture
 - Technology Stack
 - Repository Structure
+- Documentation
 - Roadmap
 - Future Improvements
 - Author
@@ -175,14 +176,19 @@ The control logic is modeled using a two-level GRAFCET to ensure deterministic a
 
 - ESP32
 - FreeRTOS
-- PlatformIO
-- Arduino Framework
+- Arduino IDE / Arduino Framework
 
 ## IoT
 
-- MQTT
+- MQTT (HiveMQ broker)
 - JSON
 - Wi-Fi
+
+## Cloud & Web
+
+- Node.js / Express (MQTT-to-cloud bridge API)
+- Firebase (Firestore, Realtime Database, Hosting)
+- Vite.js / Vanilla JavaScript (dashboard SPA)
 
 ## Mechanical
 
@@ -191,11 +197,6 @@ The control logic is modeled using a two-level GRAFCET to ensure deterministic a
 ## Electronics
 
 - KiCad
-
-## Simulation
-
-- Proteus
-- Wokwi
 
 ---
 
@@ -208,7 +209,7 @@ smart-soja/
 ├── LICENSE
 ├── .gitignore
 │
-├── docs/
+├── docs/                       # Documentation technique (9 chapitres + images)
 │   ├── 01-project-overview.md
 │   ├── 02-system-architecture.md
 │   ├── 03-hardware-design.md
@@ -221,45 +222,61 @@ smart-soja/
 │   └── images/
 │
 ├── firmware/
-│   ├── esp32/
-│   │   ├── src/
-│   │   ├── include/
-│   │   ├── lib/
-│   │   └── platformio.ini
-│   │
-│   └── simulation/
+│   └── esp32/
+│       └── src/                # Firmware ESP32 (FreeRTOS, GRAFCET)
 │
-├── hardware/
-│   ├── schematics/
-│   ├── pcb/
-│   ├── wiring/
-│   ├── bom/
-│   └── datasheets/
+├── hardware/                   # Conception électronique (KiCad)
+│   ├── conception.md
+│   ├── pcb/circuit_smart-soja/ # Projet KiCad complet (sch, pcb, gerbers, BOM)
+│   ├── schematics/              # Exports PDF/SVG du schéma
+│   ├── bom/                     # Nomenclature des composants
+│   ├── wiring/                  # Schémas de brochage (pinout) des capteurs/modules
+│   └── datasheets/               # Références vers les fiches techniques constructeur
 │
-├── mechanical/
+├── mechanical/                 # Conception mécanique (SolidWorks)
+│   ├── conception.md
 │   ├── solidworks/
 │   ├── stl/
 │   ├── drawings/
 │   └── renders/
 │
 ├── cloud/
-│   ├── mqtt/
-│   ├── database/
-│   └── dashboard/
+│   ├── mqtt/                   # Spécification du protocole ESP32 ↔ broker
+│   ├── database/                # Documentation du schéma Firestore
+│   ├── api/                     # Backend Node.js/Express (passerelle MQTT → Firebase)
+│   └── dashboard/app/           # Plateforme web Vite.js (tableaux de bord)
 │
-├── media/
+├── media/                      # Photos du prototype, captures d'écran, diagrammes
 │   ├── prototype/
 │   ├── screenshots/
-│   ├── diagrams/
-│   └── videos/
+│   └── diagrams/
 │
 ├── research/
-│   ├── references/
-│   └── standards/
+│   └── thesis/                  # Mémoire complet (source de la documentation)
 │
 └── .github/
     └── ISSUE_TEMPLATE/
 ```
+
+---
+
+# 📚 Documentation
+
+Full technical documentation lives in [`docs/`](docs/):
+
+| Chapter | Content |
+|---|---|
+| [01 – Project Overview](docs/01-project-overview.md) | Context, problem statement, objectives |
+| [02 – System Architecture](docs/02-system-architecture.md) | Edge / Cloud / Application layers |
+| [03 – Hardware Design](docs/03-hardware-design.md) | ESP32, sensors, actuators, PCB |
+| [04 – Mechanical Design](docs/04-mechanical-design.md) | Modular chassis and 4 functional blocks |
+| [05 – Software Architecture](docs/05-software-architecture.md) | FreeRTOS, GRAFCET, MQTT/JSON, web dashboard |
+| [06 – Energy System](docs/06-energy-system.md) | Solar/battery sizing |
+| [07 – Testing & Validation](docs/07-testing-validation.md) | Unit test protocol and results |
+| [08 – Results](docs/08-results.md) | Prototype outcomes, financial evaluation |
+| [09 – Future Improvements](docs/09-future-improvements.md) | Validation roadmap and product evolution |
+
+The full academic thesis (mémoire) this documentation is derived from is archived in [`research/thesis/`](research/thesis/).
 
 ---
 
@@ -270,16 +287,18 @@ smart-soja/
 - [x] Mechanical design
 - [x] Electronic architecture
 - [x] Embedded software
-- [x] Prototype implementation
-- [x] Experimental validation
+- [x] Prototype assembly and integration
+- [x] Unit-level functional validation (sensors, actuators, MQTT traceability)
 
 ### Next Milestones
 
-- [ ] PCB redesign
+- [ ] Full clean + dry cycle validation under real load (2–5 kg)
+- [ ] Load-cell (HX711) weighing module integration
+- [ ] Field testing under real environmental conditions
+- [ ] PCB redesign (multilayer)
 - [ ] Mobile application
 - [ ] OTA firmware updates
 - [ ] AI-assisted moisture prediction
-- [ ] Industrial field testing
 - [ ] Version 2 prototype
 
 ---

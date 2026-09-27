@@ -1,0 +1,186 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dégradés -->
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E5A96;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gradients par priorité -->
+    <linearGradient id="prio4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prio3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prio2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prio1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+
+    <style>
+      .task-block { fill: white; stroke: #1E293B; stroke-width: 1.5; rx: 8; }
+      .prio-header { rx: 8 8 0 0; }
+      .queue-node { fill: #F8FAFC; stroke: #64748B; stroke-width: 1.5; stroke-dasharray: 4,2; rx: 15; }
+      .header-text { font: bold 11px sans-serif; fill: white; text-anchor: middle; dominant-baseline: middle; }
+      .task-name { font: bold 14px sans-serif; fill: #0F172A; text-anchor: middle; dominant-baseline: middle; }
+      .queue-text { font: bold 10px monospace; fill: #475569; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { stroke: #94A3B8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-highlight { stroke: #1E5A96; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead-blue); }
+      .section-title { font: bold 16px sans-serif; fill: #1E5A96; text-anchor: middle; }
+    </style>
+
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94A3B8" />
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1E5A96" />
+    </marker>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- En-tête global -->
+  <rect x="0" y="0" width="1400" height="70" fill="url(#gradHeader)"/>
+  <text x="700" y="35" font-family="sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">
+    Architecture Logicielle Temps Réel (FreeRTOS)
+  </text>
+  <text x="700" y="58" font-family="sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">
+    Ordonnancement Préemptif et Communication Inter-Tâches (Queues)
+  </text>
+
+  <!-- Titres des Couches -->
+  <text class="section-title" x="250" y="110">ACQUISITION (INPUT)</text>
+  <text class="section-title" x="700" y="110">TRAITEMENT (CORE)</text>
+  <text class="section-title" x="1150" y="110">ACTIONS &amp; COM (OUTPUT)</text>
+
+  <!-- ============================================
+       COUCHE 1 : ACQUISITION
+       ============================================ -->
+  <g id="input-layer">
+    <rect class="task-block" x="100" y="350" width="220" height="100" filter="url(#shadow)"/>
+    <rect class="prio-header" x="100" y="350" width="220" height="25" fill="url(#prio2)"/>
+    <text class="header-text" x="210" y="363">PRIORITÉ 2 - NORMAL</text>
+    <text class="task-name" x="210" y="405">Task_Sensing</text>
+    <text style="font: 10px sans-serif; fill: #64748B; text-anchor: middle;" x="210" y="430">(DHT22, LoadCell, IR)</text>
+  </g>
+
+  <!-- ============================================
+       FILES D'ATTENTE (QUEUES) - ENTRE INPUT ET CORE
+       ============================================ -->
+  <rect class="queue-node" x="400" y="320" width="160" height="40" filter="url(#shadow)"/>
+  <text class="queue-text" x="480" y="340">xQueue_humidity</text>
+  
+  <rect class="queue-node" x="400" y="440" width="160" height="40" filter="url(#shadow)"/>
+  <text class="queue-text" x="480" y="460">xQueue_weight</text>
+
+  <!-- ============================================
+       COUCHE 2 : CORE (TRAITEMENT)
+       ============================================ -->
+  <!-- Task_Control -->
+  <g id="core-layer-control">
+    <rect class="task-block" x="600" y="350" width="240" height="120" filter="url(#shadow)"/>
+    <rect class="prio-header" x="600" y="350" width="240" height="25" fill="url(#prio3)"/>
+    <text class="header-text" x="720" y="363">PRIORITÉ 3 - HAUTE</text>
+    <text class="task-name" x="720" y="410">Task_Control</text>
+    <text style="font: 10px sans-serif; fill: #64748B; text-anchor: middle;" x="720" y="440">(Logique GRAFCET)</text>
+  </g>
+
+  <!-- Task_Safety -->
+  <g id="core-layer-safety">
+    <rect class="task-block" x="600" y="150" width="240" height="100" filter="url(#shadow)"/>
+    <rect class="prio-header" x="600" y="150" width="240" height="25" fill="url(#prio4)"/>
+    <text class="header-text" x="720" y="163">PRIORITÉ 4 - CRITIQUE</text>
+    <text class="task-name" x="720" y="200">Task_Safety</text>
+    <text style="font: 10px sans-serif; fill: #64748B; text-anchor: middle;" x="720" y="230">(Surveillance &amp; Alarmes)</text>
+  </g>
+
+  <!-- ============================================
+       FILES D'ATTENTE (QUEUES) - ENTRE CORE ET OUTPUT
+       ============================================ -->
+  <rect class="queue-node" x="900" y="340" width="160" height="40" filter="url(#shadow)"/>
+  <text class="queue-text" x="980" y="360">xQueue_actuators</text>
+
+  <rect class="queue-node" x="900" y="420" width="160" height="40" filter="url(#shadow)"/>
+  <text class="queue-text" x="980" y="440">xQueue_events</text>
+
+  <rect class="queue-node" x="900" y="200" width="160" height="40" filter="url(#shadow)"/>
+  <text class="queue-text" x="980" y="220">xQueue_alarms</text>
+
+  <!-- ============================================
+       COUCHE 3 : OUTPUT (ACTIONS & COM)
+       ============================================ -->
+  <!-- Task_Actuators -->
+  <g id="output-actuators">
+    <rect class="task-block" x="1100" y="340" width="220" height="100" filter="url(#shadow)"/>
+    <rect class="prio-header" x="1100" y="340" width="220" height="25" fill="url(#prio2)"/>
+    <text class="header-text" x="1210" y="353">PRIORITÉ 2 - NORMAL</text>
+    <text class="task-name" x="1210" y="395">Task_Actuators</text>
+    <text style="font: 10px sans-serif; fill: #64748B; text-anchor: middle;" x="1210" y="420">(Moteurs, Chauffe)</text>
+  </g>
+
+  <!-- Task_LCD & Task_MQTT -->
+  <g id="output-comms">
+    <rect class="task-block" x="1100" y="550" width="220" height="120" filter="url(#shadow)"/>
+    <rect class="prio-header" x="1100" y="550" width="220" height="25" fill="url(#prio1)"/>
+    <text class="header-text" x="1210" y="563">PRIORITÉ 1 - BASSE</text>
+    <text class="task-name" x="1210" y="600">Task_LCD / MQTT</text>
+    <text style="font: 10px sans-serif; fill: #64748B; text-anchor: middle;" x="1210" y="630">(Interface &amp; Cloud)</text>
+  </g>
+
+  <!-- ============================================
+       FLÈCHES (ARROWS)
+       ============================================ -->
+  <!-- Flow: Sensing -> Queues -->
+  <path class="arrow" d="M 320 400 L 360 400 L 360 340 L 400 340"/>
+  <path class="arrow" d="M 320 400 L 360 400 L 360 460 L 400 460"/>
+
+  <!-- Flow: Queues -> Control -->
+  <path class="arrow" d="M 560 340 L 600 360"/>
+  <path class="arrow" d="M 560 460 L 600 450"/>
+
+  <!-- Flow: Control -> Queues Output -->
+  <path class="arrow-highlight" d="M 840 410 L 900 360"/>
+  <path class="arrow-highlight" d="M 840 410 L 900 440"/>
+
+  <!-- Flow: Safety -> Alarms -->
+  <path class="arrow" d="M 840 200 L 900 220" stroke="#EF4444"/>
+
+  <!-- Flow: Queues -> Output Tasks -->
+  <path class="arrow" d="M 1060 360 L 1100 390"/>
+  <path class="arrow" d="M 1060 440 L 1080 440 L 1080 610 L 1100 610"/>
+  <path class="arrow" d="M 1060 220 L 1085 220 L 1085 580 L 1100 580"/>
+
+  <!-- Légende en bas -->
+  <g transform="translate(100, 780)">
+    <rect x="0" y="0" width="1200" height="80" fill="#F1F5F9" rx="8"/>
+    <text x="20" y="25" font-weight="bold" fill="#1E5A96">LÉGENDE DES PRIORITÉS :</text>
+    
+    <rect x="20" y="40" width="15" height="15" fill="url(#prio4)" rx="2"/>
+    <text x="45" y="52" font-size="12">P4: Sécurité</text>
+
+    <rect x="180" y="40" width="15" height="15" fill="url(#prio3)" rx="2"/>
+    <text x="205" y="52" font-size="12">P3: Contrôle</text>
+
+    <rect x="340" y="40" width="15" height="15" fill="url(#prio2)" rx="2"/>
+    <text x="365" y="52" font-size="12">P2: Matériel</text>
+
+    <rect x="500" y="40" width="15" height="15" fill="url(#prio1)" rx="2"/>
+    <text x="525" y="52" font-size="12">P1: Comms</text>
+
+    <line x1="700" y1="48" x2="750" y2="48" class="queue-node" style="stroke-dasharray: 4,2;"/>
+    <text x="760" y="52" font-size="12">xQueue (Inter-task)</text>
+  </g>
+
+</svg>

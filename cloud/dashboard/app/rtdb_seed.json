@@ -1,0 +1,25 @@
+{
+  "units": {
+    "SS-ALPHA": {
+      "unitId": "SS-ALPHA",
+      "humidity": 12.4,
+      "temperature": 31.2,
+      "weight": 0,
+      "status": "online",
+      "step": 0,
+      "mode": "manual",
+      "alarm": false,
+      "ir1": false,
+      "ir2": false,
+      "controls": {
+        "alimentation": false,
+        "tamis": false,
+        "ventilateur": false,
+        "chauffage": false,
+        "vis_soja": false,
+        "servo_vanne": false
+      },
+      "lastSeen": 1750006800000
+    }
+  }
+}

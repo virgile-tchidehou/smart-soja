@@ -1,0 +1,149 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .layer-bg { fill: #E8F4F8; stroke: #1E5A96; stroke-width: 2; stroke-dasharray: 5,5; }
+      .block { fill: white; stroke: #1E5A96; stroke-width: 1.5; rx: 4; }
+      .cloud { fill: white; stroke: #0066CC; stroke-width: 1.5; }
+      .label { font: bold 14px sans-serif; fill: #1E5A96; }
+      .sublabel { font: bold 12px sans-serif; fill: #1E5A96; }
+      .block-text { font: bold 12px sans-serif; fill: #0F172A; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { stroke: #64748B; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .arrow-label { font: bold 10px sans-serif; fill: #1E5A96; }
+    </style>
+    
+    <!-- Définition de la flèche -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#C41E3A" />
+    </marker>
+    
+    <!-- Ombre -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ============================================
+       COUCHE 3 : APPLICATION
+       ============================================ -->
+  <rect class="layer-bg" x="50" y="30" width="1100" height="160" rx="8"/>
+  <text class="label" x="70" y="55">COUCHE 3 : APPLICATION (Surveillance &amp; Contrôle)</text>
+
+  <!-- Dashboard Admin -->
+  <rect class="block" x="80" y="80" width="200" height="90" filter="url(#shadow)"/>
+  <text class="block-text" x="180" y="115">Dashboard</text>
+  <text class="block-text" x="180" y="135">Admin</text>
+
+  <!-- Dashboard Industrie (GDIZ) -->
+  <rect class="block" x="450" y="80" width="200" height="90" filter="url(#shadow)"/>
+  <text class="block-text" x="550" y="115">Dashboard</text>
+  <text class="block-text" x="550" y="128">Industrie (GDIZ)</text>
+  <text class="block-text" x="550" y="145" style="font-size: 9px;"></text>
+
+  <!-- Dashboard Exploitant -->
+  <rect class="block" x="820" y="80" width="200" height="90" filter="url(#shadow)"/>
+  <text class="block-text" x="920" y="115">Dashboard</text>
+  <text class="block-text" x="920" y="135">Exploitant</text>
+
+  <!-- ============================================
+       COUCHE 2 : CLOUD & RÉSEAU
+       ============================================ -->
+  <rect class="layer-bg" x="50" y="220" width="1100" height="160" rx="8"/>
+  <text class="label" x="70" y="245">COUCHE 2 : CLOUD &amp; RÉSEAU (Traitement &amp; Stockage)</text>
+
+  <!-- API Node.js Backend -->
+  <rect class="block" x="120" y="280" width="180" height="80" filter="url(#shadow)"/>
+  <text class="block-text" x="210" y="310">API</text>
+  <text class="block-text" x="210" y="330">Node.js</text>
+  <text class="block-text" x="210" y="350">Backend</text>
+
+  <!-- Broker MQTT (ellipse/cloud) -->
+  <ellipse class="cloud" cx="550" cy="320" rx="110" ry="60"/>
+  <text class="block-text" x="550" y="310">Broker MQTT</text>
+  <text class="block-text" x="550" y="335">(HiveMQ)</text>
+
+  <!-- Firebase Realtime DB -->
+  <rect class="block" x="880" y="280" width="180" height="80" filter="url(#shadow)"/>
+  <text class="block-text" x="970" y="310">Firebase</text>
+  <text class="block-text" x="970" y="330">Realtime</text>
+  <text class="block-text" x="970" y="350">DB</text>
+
+  <!-- ============================================
+       COUCHE 1 : EDGE
+       ============================================ -->
+  <rect class="layer-bg" x="50" y="410" width="1100" height="350" rx="8"/>
+  <text class="label" x="70" y="435">COUCHE 1 : EDGE (Terrain &amp; Matériel)</text>
+
+  <!-- ESP32 (unité centrale) -->
+  <rect class="block" x="450" y="480" width="200" height="100" filter="url(#shadow)"/>
+  <text class="block-text" x="550" y="515">UNITÉ CENTRALE</text>
+  <text class="block-text" x="550" y="540">ESP32</text>
+  <text class="block-text" x="550" y="560">(FreeRTOS)</text>
+
+  <!-- Capteurs -->
+  <rect class="block" x="180" y="480" width="160" height="100" filter="url(#shadow)"/>
+  <text class="block-text" x="260" y="515">Capteurs</text>
+  <text class="block-text" x="260" y="540">(Humidité,</text>
+  <text class="block-text" x="260" y="560">Poids, IR)</text>
+
+  <!-- Actionneurs -->
+  <rect class="block" x="860" y="480" width="160" height="100" filter="url(#shadow)"/>
+  <text class="block-text" x="940" y="515">Actionneurs</text>
+  <text class="block-text" x="940" y="540">(Moteurs,</text>
+  <text class="block-text" x="940" y="560">Chauffage)</text>
+
+  <!-- SD Card (Store-and-Forward) -->
+  <rect class="block" x="450" y="640" width="200" height="80" rx="4" style="fill: #D3D3D3; stroke: #1E5A96; stroke-width: 1.5;" filter="url(#shadow)"/>
+  <text class="block-text" x="550" y="665">SD Card</text>
+  <text class="block-text" x="550" y="690">(Store-and-Forward)</text>
+
+  <!-- ============================================
+       LIAISONS / FLÈCHES
+       ============================================ -->
+
+  <!-- Edge to Cloud: ESP32 ↔ MQTT -->
+  <path class="arrow" d="M 540 480 L 540 380"/>
+  <path class="arrow" d="M 560 380 L 560 480"/>
+  <text class="arrow-label" x="575" y="435">Protocole MQTT (JSON)</text>
+
+  <!-- Inside Cloud: MQTT ↔ API -->
+  <path class="arrow" d="M 430 320 L 300 320"/>
+  <path class="arrow" d="M 300 320 L 430 320"/>
+
+  <!-- Inside Cloud: MQTT ↔ Firebase -->
+  <path class="arrow" d="M 670 320 L 880 320"/>
+  <path class="arrow" d="M 880 320 L 670 320"/>
+
+  <!-- Cloud to App: MQTT → Dashboard Industrie -->
+  <path class="arrow" d="M 550 260 L 550 170"/>
+
+  <!-- Cloud to App: API → Dashboard Admin -->
+  <path class="arrow" d="M 210 280 L 210 220 L 180 220 L 180 170"/>
+
+  <!-- Cloud to App: Firebase → Dashboard Exploitant -->
+  <path class="arrow" d="M 970 280 L 970 220 L 920 220 L 920 170"/>
+
+  <!-- ESP32 ↔ Capteurs -->
+  <path class="arrow" d="M 450 520 L 340 520"/>
+  <path class="arrow" d="M 340 540 L 450 540"/>
+
+  <!-- ESP32 ↔ Actionneurs -->
+  <path class="arrow" d="M 650 520 L 860 520"/>
+  <path class="arrow" d="M 860 540 L 650 540"/>
+
+  <!-- ESP32 ↔ SD Card -->
+  <path class="arrow" d="M 540 580 L 540 640"/>
+  <path class="arrow" d="M 560 640 L 560 580"/>
+
+  <!-- Titre/Caption -->
+  <text style="font: bold 13px sans-serif; fill: #333; text-anchor: middle;" x="600" y="870">
+    Architecture système SMART-SOJA : Hiérarchie Edge-Cloud-Application
+  </text>
+</svg>

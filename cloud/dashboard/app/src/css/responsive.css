@@ -1,0 +1,210 @@
+/* ============================================
+   SMART-SOJA — Responsive Design
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    /* Sidebar */
+    .sidebar {
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    /* Menu toggle */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Content */
+    .content-wrapper {
+        padding: 1rem;
+    }
+
+    .section-header-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .stats-highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    /* Cards */
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Tables */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .data-table {
+        min-width: 600px;
+    }
+
+    /* Table toolbar */
+    .table-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-wrapper {
+        max-width: none;
+    }
+
+    /* Topbar */
+    .topbar {
+        padding: 0 1rem;
+    }
+
+    .page-title {
+        font-size: var(--text-base);
+    }
+
+    .connection-status span:last-child {
+        display: none;
+    }
+
+    /* Units grid */
+    .units-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Modal */
+    .modal {
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+
+    /* Dashboard Hero */
+    .dashboard-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .dashboard-hero .hero-actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-actions .btn {
+        flex: 1;
+        min-width: 140px;
+        justify-content: center;
+    }
+
+    /* Welcome Banner (Producteur) */
+    .user-welcome {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* Scan zone */
+    .scan-frame {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .stats-highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-icon-wrapper {
+        width: 44px;
+        height: 44px;
+    }
+
+    .stat-value {
+        font-size: var(--text-xl);
+    }
+
+    .card-header h3 {
+        font-size: var(--text-sm);
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .highlight-value {
+        font-size: 1.5rem;
+    }
+
+    .activity-item {
+        gap: 0.75rem;
+    }
+
+    .activity-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .content-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}

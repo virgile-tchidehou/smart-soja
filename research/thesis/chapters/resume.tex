@@ -1,0 +1,11 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+\chaptermark{Résumé}
+
+Ce mémoire présente la conception et la réalisation du projet \textbf{SMART-SOJA}, une unité mobile, autonome et connectée de pré-traitement du soja, développée en réponse aux exigences de qualité de la Zone Industrielle de Glo-Djigbé (GDIZ) au Bénin. Réalisé dans le cadre d'un stage de fin d'études chez \textbf{QOTTO Bénin} pour l'obtention de la Licence Professionnelle en Informatique Industrielle et Maintenance (EGEI/UCAO), ce projet répond aux limites des méthodes de traitement traditionnel qui ne garantissent pas les normes de pureté ($> 98\,\%$) et d'humidité ($< 12\,\%$) imposées par les usines de trituration.
+
+La démarche adoptée associe la modélisation mécanique CAO (SolidWorks), la conception de circuits imprimés (KiCad), l'automatisme temps réel (FreeRTOS sur microcontrôleur ESP32) et la connectivité Internet des objets (IoT). Le prototype modulaire intègre un système de tamisage vibrant entraîné par moteur DC, une chambre de séchage active par air chaud ventilé supervisée par sondes capacitives d'humidité, un module de pesée numérique (cellule de charge et amplificateur HX711) et une alimentation batterie autonome 12~V DC alimentée par panneau photovoltaïque.
+
+Les essais de laboratoire ont validé le fonctionnement correct de l'ensemble des sous-systèmes en test unitaire : capteur DHT22, sondes d'humidité du soja, moteurs d'entraînement, résistance chauffante, ventilateur et interface LCD. La transmission MQTT des données fonctionne à 100~\% sans erreur d'intégrité. Le système génère automatiquement un QR Code unique (« passeport numérique ») pour chaque lot, assurant une traçabilité robuste. Toutefois, le prototype constitue à ce stade une preuve de concept fonctionnelle. La validation en charge réelle (2~à~5~kg), l'évaluation précise du cycle complet nettoyage + séchage (atteinte des taux de pureté et d'humidité cibles), et l'intégration finale du module de pesée restent à accomplir avant un déploiement opérationnel.
+
+\textbf{Mots clés :} Soja, Pré-traitement, Informatique industrielle, Internet des objets, Traçabilité, Énergie solaire, GDIZ.

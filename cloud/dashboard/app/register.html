@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART-SOJA | Inscription Industrie (Soutenance)</title>
+    <link rel="icon" href="/assets/smart_soja_logo_vertical.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+</head>
+
+<body class="auth-page">
+    <div class="auth-bg-gradient"></div>
+    <div class="auth-particles" id="particles"></div>
+
+
+
+    <div class="register-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo-wrapper">
+                    <img src="/assets/smart_soja_logo_vertical.png" alt="SMART-SOJA" class="auth-logo-icon">
+                </div>
+                <h2>Créer un compte Industrie (Simulation)</h2>
+                <p class="brand-subtitle">Simulation d'intégration d'un partenaire industriel (Jury)</p>
+            </div>
+
+            <form id="registerForm" class="auth-form">
+                <div id="errorMsg" class="error-msg hidden"></div>
+
+                <div class="form-section-title">Informations Entreprise</div>
+
+                <div class="form-group">
+                    <label for="companyName"><i class="fas fa-industry"></i> Nom de l'entreprise</label>
+                    <input type="text" id="companyName" placeholder="Ex: GDIZ - Unité de Trituration" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualityStandard"><i class="fas fa-certificate"></i> Norme de Qualité</label>
+                    <input type="text" id="qualityStandard" placeholder="Ex: ISO 9001, GDIZ-2024" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="maxHumidity"><i class="fas fa-water"></i> Humidité Maximale Acceptable (%)</label>
+                    <input type="number" id="maxHumidity" placeholder="12" value="12" min="0" max="100" step="0.5"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualityContact"><i class="fas fa-user-tie"></i> Responsable Qualité</label>
+                    <input type="text" id="qualityContact" placeholder="Ex: Chef Qualité" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="directorContact"><i class="fas fa-user-shield"></i> Directeur Industriel</label>
+                    <input type="text" id="directorContact" placeholder="Ex: Directeur GDIZ" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone"><i class="fas fa-phone"></i> Téléphone</label>
+                    <input type="tel" id="telephone" placeholder="+229 XX XX XX XX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location"><i class="fas fa-map-marker-alt"></i> Localisation (Ville/Commune)</label>
+                    <input type="text" id="location" placeholder="Ex: Cotonou, GDIZ" required>
+                </div>
+
+                <div class="form-section-title">Identifiants d'accès</div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-at"></i> Adresse e-mail</label>
+                    <input type="email" id="email" placeholder="contact@votreentreprise.bj" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-shield-alt"></i> Mot de passe</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" placeholder="Min. 6 caractères" required>
+                        <button type="button" class="toggle-password-btn" data-target="password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="registerBtn" class="btn-primary">
+                    <span>Finaliser l'inscription</span>
+                    <i class="fas fa-check-circle"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Déjà un compte ? <a href="login.html">Se connecter</a></p>
+                <div class="back-home">
+                    <a href="/">
+                        <i class="fas fa-long-arrow-alt-left"></i> Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton flottant de thème -->
+    <button class="floating-theme-toggle" id="theme-toggle-btn" title="Changer de thème" aria-label="Basculer le thème">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+    </button>
+
+    <script>
+        // Gestion du Thème (Inline pour réactivité immédiate)
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const STORAGE_KEY = 'smartsoja-theme';
+
+        const initTheme = () => {
+            const saved = localStorage.getItem(STORAGE_KEY) || 'light';
+            if (saved === 'light') document.body.classList.add('light-mode');
+            else document.body.classList.remove('light-mode');
+        };
+
+        themeBtn?.addEventListener('click', () => {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem(STORAGE_KEY, isLight ? 'light' : 'dark');
+        });
+
+        initTheme();
+    </script>
+
+    <script type="module" src="/src/js/controllers/register.controller.js"></script>
+</body>
+
+</html>

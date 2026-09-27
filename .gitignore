@@ -1,0 +1,36 @@
+# --- Secrets ---
+.env
+.env.*
+serviceAccountKey.json
+*.pem
+*.key
+
+# --- Node / JS ---
+node_modules/
+dist/
+build/
+.firebase/
+*.tsbuildinfo
+
+# --- KiCad ---
+*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+fp-info-cache
+*.lck
+~*.lck
+
+# --- SolidWorks lock/temp files ---
+~$*
+
+# --- LaTeX build artifacts ---
+*.aux
+*.log
+*.synctex.gz
+*.toc
+*.out
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/

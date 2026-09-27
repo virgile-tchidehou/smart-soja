@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART-SOJA | Projet de Soutenance - Plateforme IoT</title>
+    <link rel="icon" href="/assets/smart_soja_logo_vertical.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/landing.css">
+    <meta name="theme-color" content="#0D9488">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 3D Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        /* CAROUSEL MOBILE FIX - CLEAN & SIMPLE */
+        @media (max-width: 1023px) {
+
+            /* Hide desktop structure, show mobile carousel */
+            .sys-arch-map {
+                display: none !important;
+            }
+
+            .sys-arch-right-pane {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            #detailsPanel {
+                width: 100%;
+                height: auto;
+                min-height: 0 !important;
+                padding: 2rem 1.5rem !important;
+                background: rgba(15, 23, 42, 0.3);
+                border: 1px solid var(--border-glow);
+                border-radius: 20px;
+                overflow: visible !important;
+            }
+
+            .detail-pane {
+                display: none;
+                width: 100%;
+            }
+
+            .detail-pane.active {
+                display: block;
+            }
+
+            .carousel-nav-dots {
+                display: flex;
+                justify-content: center;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
+            }
+
+            .carousel-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.25);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .carousel-dot.active {
+                background: var(--accent);
+                width: 32px;
+                border-radius: 6px;
+                box-shadow: 0 0 15px var(--accent-glow);
+            }
+
+            /* Show first slide on load */
+            #detailsPanel.mobile-carousel {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            /* Desktop: hide carousel dots, show grid layout */
+            .carousel-nav-dots {
+                display: none !important;
+            }
+
+            .sys-arch-right-pane {
+                display: contents;
+            }
+
+            #detailsPanel {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .detail-pane:not(#pane-1) {
+                display: none !important;
+            }
+
+            #pane-1 {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="landing-page">
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/smart_soja_logo_premium.png" alt="SMART-SOJA" class="logo-text-img">
+            </div>
+            <nav class="main-nav">
+                <a href="#features" class="nav-link">Architecture</a>
+                <a href="#how-it-works" class="nav-link">Fonctionnement</a>
+                <a href="#tech" class="nav-link">Technologies</a>
+                <div class="auth-buttons">
+                    <a href="/login.html" class="btn-login">
+                        <span>Connexion</span>
+                    </a>
+                    <a href="/register.html" class="btn-signup">
+                        <span>S'inscrire</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Projet de Soutenance : <span id="units-count">...</span> unités IoT simulées en ligne</span>
+                </div>
+                <h1 class="hero-title">
+                    Projet <span class="gradient-text">SMART-SOJA</span><br>
+                    Traçabilité & Qualité
+                </h1>
+                <p class="hero-description">
+                    Présentation de la plateforme développée dans le cadre de la soutenance de projet de fin d'études.
+                    Un système complet de contrôle qualité basé sur l'Internet des Objets (IoT).
+                </p>
+
+                <!-- Section 3D Mobile Uniquement -->
+                <div class="hero-3d-mobile-container">
+                    <div class="model-glow"></div>
+                    <model-viewer src="/smart-soja.glb" alt="Modèle 3D Mobile" auto-rotate camera-controls
+                        shadow-intensity="1" style="width: 100%; height: 300px; outline: none;">
+                    </model-viewer>
+                </div>
+                <div class="hero-actions">
+                    <a href="/login.html" class="btn-primary">
+                        <span>Accéder au Dashboard</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        <span>Découvrir l'architecture</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">IoT</span>
+                        <span class="stat-label">Capteurs Intégrés</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">Web</span>
+                        <span class="stat-label">Tableau de Bord</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">Cloud</span>
+                        <span class="stat-label">Supervision 24/7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-3d-container">
+                    <div class="model-glow"></div>
+                    <model-viewer src="/smart-soja.glb" alt="Modèle 3D de l'unité Smart-Soja" auto-rotate
+                        camera-controls shadow-intensity="2" exposure="1.2" environment-image="neutral"
+                        interaction-prompt="auto" ar style="width: 100%; height: 500px; outline: none;">
+                    </model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive System Architecture Explorer -->
+        <section id="features" class="features-section">
+            <div class="section-header">
+                <span class="section-tag">ARCHITECTURE DU SYSTÈME</span>
+                <h2>Une intelligence <span class="gradient-text">embarquée</span> au service du prototype</h2>
+                <p>Aperçu des différents modules fonctionnels développés pour cette soutenance.</p>
+            </div>
+
+            <div class="sys-arch-container">
+                <!-- Diagram / Map Panel (Left Pane) -->
+                <div class="sys-arch-map glass-card reveal">
+                    <div class="map-header">
+                        <h4>Topologie Système (ESP32 Brain)</h4>
+                    </div>
+                    <div class="map-canvas">
+                        <!-- SVG connector lines -->
+                        <svg class="svg-connectors" id="svgConnectors">
+                            <line class="conn-line active" id="line-1" x1="50%" y1="50%" x2="50%" y2="40"></line>
+                            <line class="conn-line" id="line-2" x1="50%" y1="50%" x2="80%" y2="120"></line>
+                            <line class="conn-line" id="line-3" x1="50%" y1="50%" x2="70%" y2="240"></line>
+                            <line class="conn-line" id="line-4" x1="50%" y1="50%" x2="30%" y2="240"></line>
+                            <line class="conn-line" id="line-5" x1="50%" y1="50%" x2="20%" y2="120"></line>
+                        </svg>
+
+                        <!-- Orbit nodes -->
+                        <div class="orbit-node active node-1" data-node="1" onclick="switchSysNode(1)">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <div class="orbit-node node-2" data-node="2" onclick="switchSysNode(2)">
+                            <i data-lucide="send"></i>
+                        </div>
+                        <div class="orbit-node node-3" data-node="3" onclick="switchSysNode(3)">
+                            <i data-lucide="layout-dashboard"></i>
+                        </div>
+                        <div class="orbit-node node-4" data-node="4" onclick="switchSysNode(4)">
+                            <i data-lucide="qr-code"></i>
+                        </div>
+                        <div class="orbit-node node-5" data-node="5" onclick="switchSysNode(5)">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <!-- Center node (ESP32) -->
+                        <div class="center-node">
+                            <i data-lucide="microchip"></i>
+                            <span>ESP32</span>
+                        </div>
+                    </div>
+                    <div class="node-label-popup" id="nodeLabel">Ordonnanceur FreeRTOS & GRAFCET</div>
+                </div>
+
+                <!-- RIGHT PANE: ARCHITECTURE DETAILS (GRID ON DESKTOP, CAROUSEL ON MOBILE) -->
+                <div class="sys-arch-right-pane">
+                    <div class="sys-arch-details glass-card reveal" id="detailsPanel">
+                        <!-- Pane 1: FreeRTOS -->
+                        <div class="detail-pane active" id="pane-1">
+                            <div class="pane-badge">ESP32 Core</div>
+                            <div class="pane-title">
+                                <h3>Régulation FreeRTOS & Automate GRAFCET</h3>
+                                <p>L'ordonnancement multitâche temps réel (RTOS) gère l'automate GRAFCET de traitement.
+                                    Les priorités préemptives assurent la sécurité du prototype et régulent précisément
+                                    le nettoyage et le séchage.</p>
+                            </div>
+                            <div class="flow-diagram">
+                                <div class="flow-block"><i data-lucide="cpu"></i> Task_Sensing</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="activity"></i> Task_Control</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="toggle-left"></i> Task_Actuators</div>
+                            </div>
+                            <div class="specs-table">
+                                <div class="specs-row">
+                                    <span class="specs-label">Noyau de l'OS</span>
+                                    <span class="specs-val">FreeRTOS Kernel (Dual-Core)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Type d'Ordonnancement</span>
+                                    <span class="specs-val">Préemptif basé sur les priorités</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Automate de contrôle</span>
+                                    <span class="specs-val">GRAFCET Niveau 2 (Transition/États)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Sécurité Système</span>
+                                    <span class="specs-val">Task_Safety (Watchdog à priorité max 5)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pane 2: MQTT -->
+                        <div class="detail-pane" id="pane-2">
+                            <div class="pane-badge">Télémesure</div>
+                            <div class="pane-title">
+                                <h3>Télémétrie MQTT & Passeport JSON</h3>
+                                <p>Chaque lot de soja génère un enregistrement JSON contenant des données précises
+                                    (humidité moyenne, poids final, statut du traitement), envoyé instantanément via
+                                    MQTT au Cloud pour archivage.</p>
+                            </div>
+                            <div class="flow-diagram">
+                                <div class="flow-block"><i data-lucide="file-json"></i> Payload JSON</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="wifi"></i> Broker MQTT</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="database"></i> Firebase Realtime</div>
+                            </div>
+                            <div class="specs-table">
+                                <div class="specs-row">
+                                    <span class="specs-label">Protocole Réseau</span>
+                                    <span class="specs-val">MQTT v3.1.1 (Léger & Robuste)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Structure du Payload</span>
+                                    <span class="specs-val">JSON Sérialisé (Humidité, Poids, Status)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Sécurité Transport</span>
+                                    <span class="specs-val">Connexion TLS/SSL + Authentification</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Garantie Livraison</span>
+                                    <span class="specs-val">QoS 1 (At least once delivery)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pane 3: Supervision -->
+                        <div class="detail-pane" id="pane-3">
+                            <div class="pane-badge">IHM Cloud</div>
+                            <div class="pane-title">
+                                <h3>Supervision Cloud Tri-Profils</h3>
+                                <p>Une interface unifiée découpée en trois profils d'accès pour répondre aux besoins
+                                    opérationnels, industriels (GDIZ) et administratifs de la filière soja.</p>
+                            </div>
+                            <div class="flow-diagram">
+                                <div class="flow-block"><i data-lucide="user"></i> Exploitant</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="building-2"></i> Industriel (GDIZ)</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="shield"></i> Administrateur</div>
+                            </div>
+                            <div class="specs-table">
+                                <div class="specs-row">
+                                    <span class="specs-label">Profil Exploitant</span>
+                                    <span class="specs-val">IHM Mobile, Contrôle local & Alertes</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Profil Industriel GDIZ</span>
+                                    <span class="specs-val">Analytique, Taux de conformité & PDF</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Profil Administrateur</span>
+                                    <span class="specs-val">Gestion de flotte, OTA, Métriques d'usure</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Technologie IHM</span>
+                                    <span class="specs-val">React JS & Firebase Web SDK</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pane 4: QR Code -->
+                        <div class="detail-pane" id="pane-4">
+                            <div class="pane-badge">Traçabilité</div>
+                            <div class="pane-title">
+                                <h3>Certification Numérique & QR Code</h3>
+                                <p>Génération instantanée de QR codes sur étiquette physique. Le scan sur sac permet aux
+                                    acheteurs de la GDIZ de télécharger le certificat de qualité PDF du lot.</p>
+                            </div>
+                            <div class="flow-diagram">
+                                <div class="flow-block"><i data-lucide="scan"></i> Scan QR Code</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="link"></i> URL Firebase Storage</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="file-text"></i> Rapport PDF Certifié</div>
+                            </div>
+                            <div class="specs-table">
+                                <div class="specs-row">
+                                    <span class="specs-label">Type d'étiquette</span>
+                                    <span class="specs-val">QR Code Dynamique unique par lot</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Hébergement PDF</span>
+                                    <span class="specs-val">Firebase Cloud Storage</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Intégrité des Rapports</span>
+                                    <span class="specs-val">Signature numérique et non-répudiation</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Compatibilité terrain</span>
+                                    <span class="specs-val">Scan standard sans application dédiée</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pane 5: Store & Forward -->
+                        <div class="detail-pane" id="pane-5">
+                            <div class="pane-badge">Résilience</div>
+                            <div class="pane-title">
+                                <h3>Résilience Réseau & Store & Forward</h3>
+                                <p>Pour garantir l'intégrité des mesures en zones rurales béninoises sans réseau,
+                                    l'ESP32 stocke les transactions sur carte SD locale et les synchronise
+                                    automatiquement dès le retour du réseau.</p>
+                            </div>
+                            <div class="flow-diagram">
+                                <div class="flow-block"><i data-lucide="wifi-off"></i> Mode Offline</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="hard-drive"></i> Queue FIFO SD</div>
+                                <div class="flow-arrow"><i data-lucide="arrow-right"></i></div>
+                                <div class="flow-block"><i data-lucide="refresh-cw"></i> Sync Auto</div>
+                            </div>
+                            <div class="specs-table">
+                                <div class="specs-row">
+                                    <span class="specs-label">Stockage Local</span>
+                                    <span class="specs-val">Carte MicroSD 16Go (Bus SPI)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Structure de stockage</span>
+                                    <span class="specs-val">Queue FIFO (First-In First-Out)</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Détection Réseau</span>
+                                    <span class="specs-val">Auto-ping cyclique WiFi/GPRS</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="specs-label">Intégrité des données</span>
+                                    <span class="specs-val">Sommes de contrôle CRC32</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Carousel Navigation Dots -->
+                    <div class="carousel-nav-dots" id="carouselDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works / Interactive Architecture -->
+        <section id="architecture" class="architecture-section">
+            <div class="section-header">
+                <span class="section-tag">CONCEPTION MÉCATRONIQUE</span>
+                <h2>Architecture <span class="gradient-text">Modulaire & Synoptique</span></h2>
+                <p>Découvrez la structure matérielle (SolidWorks), électronique (KiCad) et logicielle (FreeRTOS) du
+                    prototype SMART-SOJA.</p>
+            </div>
+
+            <div class="architecture-container glass-card">
+                <!-- Selecteurs / Onglets interactifs -->
+                <div class="arch-tabs">
+                    <button class="arch-tab-btn active" onclick="switchArchBlock(1)">
+                        <span class="arch-tab-num">01</span>
+                        <div class="arch-tab-text">
+                            <h4>Entrée & Nettoyage</h4>
+                            <p>Bloc 1 & 2 : Trémie & double tamis vibrant</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="arch-tab-chevron"></i>
+                    </button>
+
+                    <button class="arch-tab-btn" onclick="switchArchBlock(2)">
+                        <span class="arch-tab-num">02</span>
+                        <div class="arch-tab-text">
+                            <h4>Séchage & Analyse</h4>
+                            <p>Bloc 3 : Vis Archimède & Capteurs</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="arch-tab-chevron"></i>
+                    </button>
+
+                    <button class="arch-tab-btn" onclick="switchArchBlock(3)">
+                        <span class="arch-tab-num">03</span>
+                        <div class="arch-tab-text">
+                            <h4>Pesée & Réception</h4>
+                            <p>Bloc 4 : Cellule HX711 & Détection</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="arch-tab-chevron"></i>
+                    </button>
+
+                    <button class="arch-tab-btn" onclick="switchArchBlock(4)">
+                        <span class="arch-tab-num">04</span>
+                        <div class="arch-tab-text">
+                            <h4>Centrale Solaire PV</h4>
+                            <p>Alimentation photovoltaïque autonome</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="arch-tab-chevron"></i>
+                    </button>
+                </div>
+
+                <!-- Panneau interactif de visualisation -->
+                <div class="arch-viewer">
+                    <div class="viewer-header">
+                        <div class="viewer-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="viewer-status">
+                            <span class="pulse-dot"></span>
+                            <span id="viewer-status-text">ESP32: MODE_SIMULATION</span>
+                        </div>
+                    </div>
+
+                    <div class="viewer-body">
+                        <!-- Bloc 1 Content -->
+                        <div id="arch-content-1" class="arch-block-content active">
+                            <div class="block-info">
+                                <h3>Bloc 1 & 2 : Unité d'Entrée & Nettoyage Vibratoire</h3>
+                                <p class="block-desc">Gère l'alimentation en soja et la séparation granulométrique des
+                                    impuretés (poussières, débris) par tamisage vibrant double couche.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <i data-lucide="settings"></i>
+                                        <span><strong>Actionneurs :</strong> Servomoteur SG90 (Trémie), Moteur vibrant
+                                            JGA25-370</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="eye"></i>
+                                        <span><strong>Capteurs :</strong> Capteur de présence infrarouge IR1</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="cpu"></i>
+                                        <span><strong>Tâche FreeRTOS :</strong> Task_Actuators (Priorité 2, Cycle
+                                            50ms)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="activity"></i>
+                                        <span><strong>Transition GRAFCET :</strong> Condition de présence de grain
+                                            valide</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-terminal">
+                                <div class="terminal-title">SORTIE SENSORIELLE & EMBARQUÉE (SIMULÉE)</div>
+                                <pre><code class="terminal-logs">[07:15:02] [Task_Sensing] IR1 Sensor: Grain detected!
+[07:15:02] [Task_Control] GRAFCET state: State 1 (Feeding Activated)
+[07:15:02] [Task_Actuators] SG90 Servo open angle: 90°
+[07:15:03] [Task_Actuators] JGA25-370 Sieve motor: ON (100% PWM)
+[07:15:05] [Task_Control] GRAFCET state: State 2 (Sieving Process)
+[07:15:05] [Task_Sensing] Flow rate: Stable (120 g/s)
+[07:15:08] [Task_Control] Sieve cycle done. Transitioning to drying...</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Bloc 2 Content -->
+                        <div id="arch-content-2" class="arch-block-content">
+                            <div class="block-info">
+                                <h3>Bloc 3 : Unité de Séchage & Analyse Mécatronique</h3>
+                                <p class="block-desc">Assure le séchage homogène par circulation d'air chaud et brassage
+                                    mécanique continu, combiné à une mesure directe du taux d'humidité.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <i data-lucide="settings"></i>
+                                        <span><strong>Actionneurs :</strong> Vis sans fin d'Archimède (Moteur),
+                                            Ventilateur + Résistance</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="eye"></i>
+                                        <span><strong>Capteurs :</strong> 2x Sondes capacitives (Soil1/2), Capteur DHT22
+                                            (Air)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="cpu"></i>
+                                        <span><strong>Tâche FreeRTOS :</strong> Task_Sensing (Priorité 2, Cycle
+                                            100ms)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="activity"></i>
+                                        <span><strong>Sécurité Active :</strong> Task_Safety (Surveillance de
+                                            température de l'air)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-terminal">
+                                <div class="terminal-title">SORTIE SENSORIELLE & EMBARQUÉE (SIMULÉE)</div>
+                                <pre><code class="terminal-logs">[07:15:10] [Task_Sensing] DHT22 Air Temp: 48.5°C | Humidity: 32.1%
+[07:15:10] [Task_Sensing] Soil Sensor 1: 14.8% (Raw: 2840)
+[07:15:10] [Task_Sensing] Soil Sensor 2: 15.2% (Raw: 2910)
+[07:15:11] [Task_Control] GRAFCET state: State 3 (Drying in Progress)
+[07:15:11] [Task_Actuators] Archimedes Screw: ON (Continuous mixing)
+[07:15:15] [Task_Sensing] Avg Moisture: 11.8% -> SUCCESS!
+[07:15:16] [Task_Control] Target reached (&lt;12%). Stopping heating.</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Bloc 3 Content -->
+                        <div id="arch-content-3" class="arch-block-content">
+                            <div class="block-info">
+                                <h3>Bloc 4 : Unité de Pesée & Réception Finale</h3>
+                                <p class="block-desc">Gère la quantification finale du grain prêt pour la
+                                    commercialisation et assure la sécurité lors du retrait des sacs.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <i data-lucide="settings"></i>
+                                        <span><strong>Actionneurs :</strong> Buzzer local, Voyant LED d'état de
+                                            cycle</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="eye"></i>
+                                        <span><strong>Capteurs :</strong> Cellule de charge (HX711), Capteur infrarouge
+                                            IR2</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="cpu"></i>
+                                        <span><strong>Tâche FreeRTOS :</strong> Task_LCD & Task_MQTT (Priorité 1,
+                                            200/500ms)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="activity"></i>
+                                        <span><strong>Actionneurs IHM :</strong> Écran LCD I2C 16x2 local</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-terminal">
+                                <div class="terminal-title">SORTIE SENSORIELLE & EMBARQUÉE (SIMULÉE)</div>
+                                <pre><code class="terminal-logs">[07:15:20] [Task_Sensing] HX711 Load Cell: weighing process...
+[07:15:21] [Task_Sensing] Stable weight: 5002g
+[07:15:21] [Task_Control] GRAFCET state: State 4 (Weight Certified)
+[07:15:22] [Task_LCD] LCD Write: "5.00 kg - SOJA OK"
+[07:15:23] [Task_MQTT] Publishing Digital Passport JSON to Firebase...
+[07:15:23] [Task_MQTT] MQTT Server: Publish success (Topic: smartsoja/batch)
+[07:15:24] [Task_Sensing] IR2 Sac removed. Ready for next cycle.</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Bloc 4 Content -->
+                        <div id="arch-content-4" class="arch-block-content">
+                            <div class="block-info">
+                                <h3>Centrale Solaire PV : Alimentation Isolée</h3>
+                                <p class="block-desc">Assure l'autosuffisance énergétique complète de la plateforme
+                                    mobile sur le terrain grâce à une architecture solaire photovoltaïque dédiée.</p>
+
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <i data-lucide="sun"></i>
+                                        <span><strong>Production :</strong> Panneau solaire photovoltaïque
+                                            monocristallin</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="database"></i>
+                                        <span><strong>Stockage :</strong> Batterie Gel à décharge lente (12V)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="activity"></i>
+                                        <span><strong>Régulation :</strong> Régulateur de charge MPPT et convertisseur
+                                            12V-5V Buck LM2596</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i data-lucide="shield-alert"></i>
+                                        <span><strong>Protection :</strong> Fusibles thermiques et diodes de
+                                            blocage</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-terminal">
+                                <div class="terminal-title">SORTIE SENSORIELLE & EMBARQUÉE (SIMULÉE)</div>
+                                <pre><code class="terminal-logs">[07:15:00] [Task_Safety] Battery Voltage: 12.8V (Normal state)
+[07:15:00] [Task_Safety] Current draw: 1.45 A
+[07:15:00] [Task_Safety] Charger Status: MPPT Bulk Charging
+[07:15:05] [Task_Safety] Buck Converter LM2596: 5.04V output ok
+[07:15:10] [Task_Safety] ESP32 Core Voltage: 3.32V stable
+[07:15:15] [Task_Safety] Load state: Nominal. Energy reserve: 85%</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section id="ecosystem" class="ecosystem-section">
+            <div class="container">
+                <div class="ecosystem-grid">
+                    <div class="eco-text">
+                        <span class="section-tag">PROBLÉMATIQUE ET CADRE</span>
+                        <h2>Cahier des Charges <span class="gradient-text">GDIZ</span></h2>
+                        <p>Le prototype répond précisément aux exigences de qualité de la Zone Industrielle de
+                            Glo-Djigbé (GDIZ) au Bénin en garantissant :</p>
+                        <ul class="eco-list">
+                            <li><i data-lucide="check-circle" class="eco-check"></i> Taux d'humidité final strictement
+                                inférieur à 12%</li>
+                            <li><i data-lucide="check-circle" class="eco-check"></i> Taux de pureté granulométrique
+                                supérieur à 98%</li>
+                            <li><i data-lucide="check-circle" class="eco-check"></i> Traçabilité numérique continue du
+                                champ jusqu'à l'usine</li>
+                        </ul>
+                    </div>
+                    <div class="eco-visual glass-card">
+                        <div class="eco-flow">
+                            <div class="node">Producteur (Champ)</div>
+                            <div class="arrow">→</div>
+                            <div class="node active">SMART-SOJA IoT</div>
+                            <div class="arrow">→</div>
+                            <div class="node">Usines GDIZ (Bénin)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Tech Showcase -->
+        <section id="tech" class="tech-section">
+            <div class="tech-bg-pattern"></div>
+            <div class="section-header">
+                <span class="section-tag">STACK TECHNIQUE</span>
+                <h2>Technologies <span class="gradient-text">Utilisées</span> pour le Projet</h2>
+            </div>
+            <div class="tech-showcase">
+                <div class="tech-card glass-card">
+                    <div class="tech-icon"><i data-lucide="cpu"></i></div>
+                    <h4>ESP32 & FreeRTOS</h4>
+                    <p>Firmware multitâche ordonnancé en 6 tâches de priorités distinctes, avec sécurité active.</p>
+                </div>
+                <div class="tech-card glass-card">
+                    <div class="tech-icon"><i data-lucide="wrench"></i></div>
+                    <h4>KiCad & SolidWorks</h4>
+                    <p>Conception CAO modulaire mécanique et PCB double-face optimisé contre les parasites.</p>
+                </div>
+                <div class="tech-card glass-card">
+                    <div class="tech-icon"><i data-lucide="zap"></i></div>
+                    <h4>MQTT & JSON</h4>
+                    <p>Communication temps réel de passes numériques pour la traçabilité des lots.</p>
+                </div>
+                <div class="tech-card glass-card">
+                    <div class="tech-icon"><i data-lucide="sun"></i></div>
+                    <h4>Centrale Solaire PV</h4>
+                    <p>Alimentation photovoltaïque autonome dimensionnée pour les zones rurales isolées.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Colonne 1: Vision -->
+                <div class="footer-column brand-column">
+                    <div class="footer-logo">
+                        <img src="/assets/smart_soja_icon_premium.png" alt="SMART-SOJA">
+                        <span class="gradient-text">SMART-SOJA</span>
+                    </div>
+                    <p class="footer-desc">Projet de fin d'études : plateforme IoT pour la digitalisation et le contrôle
+                        qualité de la chaîne de valeur du soja.</p>
+                </div>
+
+                <!-- Colonne 2: Plateforme -->
+                <div class="footer-column">
+                    <h4>Le Projet</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Architecture</a></li>
+                        <li><a href="#how-it-works">Fonctionnement</a></li>
+                        <li><a href="#ecosystem">Cas d'usage</a></li>
+                        <li><a href="#tech">Technologies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3: Ressources -->
+                <div class="footer-column">
+                    <h4>Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support Technique</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">API IoT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 4: Social & Trust -->
+                <div class="footer-column">
+                    <h4>Communauté</h4>
+                    <div class="social-grid">
+                        <a href="#" class="social-item" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-item" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="footer-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Projet de Soutenance 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 SMART-SOJA. Tous droits réservés.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="floating-theme-toggle" id="theme-toggle-btn" title="Changer de thème" aria-label="Basculer le thème">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+    </button>
+
+    <script type="module">
+        // Interactive Architecture Block Switcher
+        window.switchArchBlock = (index) => {
+            const buttons = document.querySelectorAll('.arch-tab-btn');
+            const contents = document.querySelectorAll('.arch-block-content');
+
+            buttons.forEach((btn, i) => {
+                if (i === (index - 1)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            contents.forEach((content, i) => {
+                if (i === (index - 1)) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+
+            const statusText = document.getElementById('viewer-status-text');
+            const statusDot = document.querySelector('.pulse-dot');
+            if (statusText && statusDot) {
+                if (index === 4) {
+                    statusText.textContent = "ALIMENTATION: SOLAIRE_OK";
+                    statusDot.style.background = "#eab308";
+                } else {
+                    statusText.textContent = "ESP32: BLOC_0" + index + "_ACTIF";
+                    statusDot.style.background = "#10b981";
+                }
+            }
+        };
+
+        // Theme Management for Landing Page
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const initTheme = () => {
+            const savedTheme = localStorage.getItem('smartsoja-theme') || 'light';
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            } else {
+                document.body.classList.remove('light-mode');
+            }
+        };
+
+        themeBtn?.addEventListener('click', () => {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('smartsoja-theme', isLight ? 'light' : 'dark');
+        });
+
+        // Scroll Reveal Animation Logic
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Facultatif : arrêter d'observer une fois révélé
+                    // observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.15, // Déclenche quand 15% de l'élément est visible
+            rootMargin: '0px 0px -50px 0px' // Marge pour un déclenchement plus naturel
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        initTheme();
+
+        // Initialize Lucide Icons with wait for loading
+        const initLucideIcons = () => {
+            if (window.lucide && window.lucide.createIcons) {
+                window.lucide.createIcons();
+            } else {
+                // Retry after 100ms if lucide not yet loaded
+                setTimeout(initLucideIcons, 100);
+            }
+        };
+        initLucideIcons();
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mainNav = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            mainNav?.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Header Scroll Effect
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header?.classList.add('scrolled');
+            } else {
+                header?.classList.remove('scrolled');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav?.classList.remove('active');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+        // Interactive System Architecture Explorer Switcher & Auto-Rotation
+        let sysNodeInterval;
+        let sysNodeTimeout;
+        let currentSysNode = 1;
+        let isAutoRotating = true;
+
+        const startSysNodeRotation = () => {
+            sysNodeInterval = setInterval(() => {
+                if (isAutoRotating) {
+                    currentSysNode = (currentSysNode % 5) + 1;
+                    window.switchSysNode(currentSysNode, false); // false means don't stop rotation, just transition
+                }
+            }, 5000); // 5 seconds per node
+        };
+
+        const stopSysNodeRotation = () => {
+            isAutoRotating = false;
+            clearInterval(sysNodeInterval);
+            clearTimeout(sysNodeTimeout);
+
+            // Restart auto-rotation after 12 seconds of user inactivity
+            sysNodeTimeout = setTimeout(() => {
+                isAutoRotating = true;
+                startSysNodeRotation();
+            }, 12000);
+        };
+
+        window.switchSysNode = (nodeId, stopAuto = true) => {
+            currentSysNode = nodeId;
+            if (stopAuto) {
+                stopSysNodeRotation();
+            }
+
+            // Update orbit nodes
+            document.querySelectorAll('.orbit-node').forEach(node => {
+                node.classList.remove('active');
+            });
+            const activeNode = document.querySelector(`.node-${nodeId}`);
+            if (activeNode) activeNode.classList.add('active');
+
+            // Update SVG lines
+            for (let i = 1; i <= 5; i++) {
+                const line = document.getElementById(`line-${i}`);
+                if (line) {
+                    if (i === nodeId) {
+                        line.classList.add('active');
+                    } else {
+                        line.classList.remove('active');
+                    }
+                }
+            }
+
+            // Update detail panes
+            document.querySelectorAll('.detail-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            const activePane = document.getElementById(`pane-${nodeId}`);
+            if (activePane) activePane.classList.add('active');
+
+            // Update node labels
+            const labels = {
+                1: "Ordonnanceur FreeRTOS & GRAFCET",
+                2: "Télémétrie MQTT & Passeport JSON",
+                3: "Supervision Cloud Tri-Profils",
+                4: "Certification Numérique & QR Code",
+                5: "Résilience Réseau & Store & Forward"
+            };
+            const labelEl = document.getElementById('nodeLabel');
+            if (labelEl) {
+                labelEl.textContent = labels[nodeId];
+            }
+        };
+
+        // Align SVG connectors dynamically
+        const updateSysConnectors = () => {
+            const centerNode = document.querySelector('.center-node');
+            const canvas = document.querySelector('.map-canvas');
+            if (!centerNode || !canvas) return;
+
+            const canvasRect = canvas.getBoundingClientRect();
+            const centerRect = centerNode.getBoundingClientRect();
+
+            const cx = (centerRect.left + centerRect.width / 2) - canvasRect.left;
+            const cy = (centerRect.top + centerRect.height / 2) - canvasRect.top;
+
+            for (let i = 1; i <= 5; i++) {
+                const orbitNode = document.querySelector(`.node-${i}`);
+                const line = document.getElementById(`line-${i}`);
+                if (orbitNode && line) {
+                    const orbitRect = orbitNode.getBoundingClientRect();
+                    const ox = (orbitRect.left + orbitRect.width / 2) - canvasRect.left;
+                    const oy = (orbitRect.top + orbitRect.height / 2) - canvasRect.top;
+
+                    line.setAttribute('x1', cx);
+                    line.setAttribute('y1', cy);
+                    line.setAttribute('x2', ox);
+                    line.setAttribute('y2', oy);
+                }
+            }
+        };
+
+        // Trigger connectors alignment & start slideshow rotation
+        window.addEventListener('load', () => {
+            updateSysConnectors();
+            setTimeout(updateSysConnectors, 200);
+            startSysNodeRotation();
+        });
+        window.addEventListener('resize', updateSysConnectors);
+
+        // Dynamisation du compteur d'unités (Cohérent avec le reste de la plateforme)
+        import { db, COLLECTIONS, collection, onSnapshot } from "/src/js/config/firebase-init.js";
+
+        const updateUnitsCount = () => {
+            const unitsRef = collection(db, COLLECTIONS.UNITS);
+            onSnapshot(unitsRef, (snapshot) => {
+                const count = snapshot.size;
+                const countEl = document.getElementById('units-count');
+                if (countEl) countEl.textContent = count;
+            });
+        };
+
+        updateUnitsCount();
+
+        // ===== MOBILE CAROUSEL NAVIGATION =====
+        const initMobileCarousel = () => {
+            const detailsPanel = document.getElementById('detailsPanel');
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+
+            const panes = detailsPanel.querySelectorAll('.detail-pane');
+            const paneCount = panes.length;
+            let currentPane = 0;
+
+            // Create navigation dots
+            for (let i = 0; i < paneCount; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('data-index', i);
+                dot.addEventListener('click', () => navigateTo(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            // Navigate to specific pane
+            const navigateTo = (index) => {
+                panes.forEach((pane, i) => {
+                    if (i === index) {
+                        pane.classList.add('active');
+                    } else {
+                        pane.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+
+                currentPane = index;
+            };
+
+            // Swipe navigation for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            detailsPanel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].clientX;
+            }, false);
+
+            detailsPanel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].clientX;
+                const swipeThreshold = 50;
+                if (touchStartX - touchEndX > swipeThreshold && currentPane < paneCount - 1) {
+                    navigateTo(currentPane + 1);
+                } else if (touchEndX - touchStartX > swipeThreshold && currentPane > 0) {
+                    navigateTo(currentPane - 1);
+                }
+            }, false);
+
+            // Show carousel on mobile only
+            const checkMobile = () => {
+                const isMobile = window.innerWidth <= 1023;
+                if (isMobile) {
+                    detailsPanel.classList.add('mobile-carousel');
+                } else {
+                    detailsPanel.classList.remove('mobile-carousel');
+                    // Reset to first pane on desktop
+                    navigateTo(0);
+                }
+            };
+
+            window.addEventListener('resize', checkMobile);
+            checkMobile();
+
+            // Sync with orbit node clicks on mobile
+            window.switchSysNodeMobile = (nodeId) => {
+                window.switchSysNode(nodeId, true);
+                if (window.innerWidth <= 1023) {
+                    navigateTo(nodeId - 1);
+                }
+            };
+        };
+
+        // Initialize carousel on page load
+        window.addEventListener('load', () => {
+            initMobileCarousel();
+        });
+    </script>
+</body>
+
+</html>

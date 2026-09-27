@@ -1,0 +1,24 @@
+{
+  "name": "smartsoja_api",
+  "version": "1.0.0",
+  "description": "Smart-Soja Backend API & MQTT Bridge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "postinstall": "npm install --save wkhtmltopdf && (command -v wkhtmltopdf >/dev/null 2>&1 || (apt-get update && apt-get install -y wkhtmltopdf xfonts-75dpi xfonts-100dpi xfonts-scalable xfonts-encodings)) || true"
+  },
+  "keywords": [],
+  "author": "Smart-Soja",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^3.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "firebase-admin": "^13.8.0",
+    "mqtt": "^5.15.1",
+    "qrcode": "^1.5.3",
+    "wkhtmltopdf": "^0.3.4"
+  }
+}

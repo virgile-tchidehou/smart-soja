@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+
+%================= PACKAGES =================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{titlesec}
+
+\geometry{margin=1.5cm}
+
+%================= STYLE =================
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\renewcommand{\arraystretch}{1.2}
+
+%================= DOCUMENT =================
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{SMART-SOJA}}\\[5pt]
+    {\large Liste de Matériel (BOM)}\\[3pt]
+    \textit{Document destiné à l'achat des composants électroniques}
+\end{center}
+
+\vspace{8pt}
+
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{1.5cm} | X | X | >{\centering\arraybackslash}p{3cm}}
+\toprule
+\rowcolor{gray!30}
+\textbf{Qté} & \textbf{Désignation} & \textbf{Référence / Footprint} & \textbf{Catégorie} \\
+\midrule
+
+1 & ESP32-DEVKITC-32E & MODULE\_ESP32-DEVKITC-32E & Microcontrôleur \\
+\rowcolor{gray!10}
+1 & Écran LCD 16x2 avec interface I2C & LCD16X2\_I2C (DS1) & Affichage \\
+1 & Capteur DHT22 (Température \& Humidité) & DHT22 (U1) & Capteur \\
+\rowcolor{gray!10}
+2 & Capteur Infrarouge (IR) & IR1, IR2 & Capteur \\
+2 & Sonde d'humidité du sol & Soil1, Soil2 & Capteur \\
+\rowcolor{gray!10}
+1 & Module Amplificateur HX711 & Module HX711 (J8) & Module \\
+1 & Module Lecteur Carte SD & SD Card (J12) & Module \\
+\rowcolor{gray!10}
+1 & Module Régulateur Buck LM2596 & LM2596 (J5) & Alimentation \\
+
+2 & Moteur DC 12V (JGA25-370) & Motor1, Motor2 & Actionneur \\
+\rowcolor{gray!10}
+1 & Servomoteur SG90 & Motor\_Servo (M1) & Actionneur \\
+1 & Ventilateur 12V DC & FAN\_12V (J13) & Actionneur \\
+\rowcolor{gray!10}
+1 & Résistance chauffante 12V & HEATER\_12V (J11) & Actionneur \\
+1 & Buzzer 12V & BZ1 & Alerte \\
+
+\rowcolor{gray!10}
+1 & Fusible 5A & F1 & Protection \\
+1 & Prise Jack Alim 12V & BarrelJack\_Horizontal (J1) & Connectique \\
+\rowcolor{gray!10}
+2 & Bouton poussoir 6mm & SW1, SW2 & Interface \\
+
+4 & MOSFET de puissance & IRLZ44N (Q1-Q4) & Actif \\
+\rowcolor{gray!10}
+1 & Transistor NPN & BC547 (Q5) & Actif \\
+6 & Diode de puissance & 1N5408 & Actif \\
+\rowcolor{gray!10}
+5 & LED (Rouge/Vert/Bleu) & D2, D3, D6-D8 & Actif \\
+
+7 & Résistance 10k$\Omega$ & R2, R6, R7, R12, R13, R15, R16 & Passif \\
+\rowcolor{gray!10}
+4 & Résistance 4.7k$\Omega$ & R8, R9, R17, R18 & Passif \\
+2 & Résistance 1k$\Omega$ & R1, R3 & Passif \\
+\rowcolor{gray!10}
+6 & Résistance 220$\Omega$ & R4, R5, R10, R11, R14, R19 & Passif \\
+
+10 & Condensateur 100nF & C1, C3, C4, C6, C7, C9, C10, C13, C18, C19 & Passif \\
+\rowcolor{gray!10}
+6 & Condensateur 470µF & C5, C8, C14, C15, C20, C21 & Passif \\
+4 & Condensateur 10µF & C11, C12, C16, C17 & Passif \\
+\rowcolor{gray!10}
+1 & Condensateur 100µF & C2 & Passif \\
+
+6 & Bornier à vis 2 contacts & J3, J9, J10, J11, J13, J14 & Connectique \\
+\rowcolor{gray!10}
+2 & Barrette de pins mâles (40 broches à découper) & Strip Header Male & Connectique \\
+2 & Barrette de pins femelles (40 broches à découper) & Strip Header Female & Connectique \\
+
+\bottomrule
+\end{tabularx}
+
+\vspace{10pt}
+
+\begin{center}
+\textit{Document généré pour approvisionnement des composants du projet SMART-SOJA}
+\end{center}
+
+\end{document}

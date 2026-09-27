@@ -1,0 +1,36 @@
+% ================== CONCLUSION GÉNÉRALE ==================
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+\markboth{Conclusion générale}{Conclusion générale}
+
+Le projet \textbf{SMART-SOJA} est né d'un constat critique : l'ambition du Bénin de transformer sa production de soja via des pôles industriels comme la GDIZ ne peut aboutir sans un maillon technologique intermédiaire capable de garantir la qualité des grains dès leur lieu de collecte. Les méthodes post-récolte traditionnelles, incapables d'atteindre les normes industrielles (humidité $<$ 12~\%, pureté $>$ 98~\%), génèrent en effet des pertes estimées entre 15~\% et 25~\% de la production et provoquent des refoulements réguliers aux portes des usines.
+
+\textbf{Ce mémoire a permis de concevoir et de prototyper une réponse mécatronique intégrée à ce défi}, articulée autour de trois réalisations majeures correspondant aux objectifs spécifiques :
+
+\begin{enumerate}
+    \item \textbf{Analyse des besoins :} l'étude du contexte de la filière soja et des exigences de qualité imposées par les unités de transformation a permis de définir un cahier des charges précis pour le système SMART-SOJA, notamment pureté $>$ 98~\% et humidité finale $<$ 12~\%.
+
+    \item \textbf{Développement de la solution mécatronique :} le prototype intègre une architecture mécanique modulaire (trémie d'alimentation avec détection de présence, système de tamisage vibrant entraîné par moteur DC, chambre de séchage active avec résistance chauffante et ventilation, module de pesée), un système de contrôle-commande embarqué temps réel sous FreeRTOS sur ESP32, un circuit imprimé conçu sous KiCad, une connectivité Internet des objets complète via MQTT et une alimentation batterie autonome 12~V DC (panneau photovoltaïque).
+
+    \item \textbf{Validation fonctionnelle et traçabilité numérique :} les tests de laboratoire ont permis de valider le fonctionnement correct de l'ensemble des sous-systèmes pris individuellement : capteur DHT22, sondes d'humidité du soja, moteur de tamisage, résistance chauffante, ventilateur, interface LCD et transmission MQTT. Le pipeline de traçabilité Internet des objets constitue une innovation majeure du projet, permettant la génération automatique d'un QR Code unique et la création d'un « passeport numérique » pour chaque lot. La transmission robuste des données via MQTT vers un broker externe et leur sauvegarde locale en format JSON assurent la traçabilité complète du processus de transformation.
+\end{enumerate}
+
+\medskip
+
+Toutefois, ces résultats prometteurs doivent être mis en perspective. Il convient de souligner que le prototype réalisé constitue à ce stade une preuve de concept fonctionnelle, dont chaque module a été validé en test unitaire, mais qui requiert des améliorations substantielles avant un déploiement en conditions réelles. En particulier, les validations de ce chapitre ont porté sur des charges de test réduites (quelques centaines de grammes), et le comportement du système en charge nominale (2~à~5~kg), ainsi que la performance globale du cycle complet nettoyage + séchage (atteinte du taux de pureté et d'humidité cibles), restent à quantifier précisément. L'intégration du module de pesée (cellule de charge HX711) constitue également une étape clé encore en cours de finalisation. Enfin, la robustesse de l'alimentation batterie et la stabilité de l'électronique lors de cycles fonctionnels intensifs en environnement de terrain n'ont pas été évaluées.
+
+\medskip
+
+\textbf{Les travaux futurs} s'articulent autour de trois axes prioritaires :
+\begin{itemize}
+    \item \textbf{Validation en charge réelle :} cycles complets nettoyage + séchage avec charges progressives (100~g, 500~g, 2~kg, 5~kg) en laboratoire. Mesure du temps de séchage, du taux de pureté du soja après tamisage et de la stabilité des paramètres (température, humidité) dans la chambre de séchage. Validation de l'autonomie batterie en fonctionnement continu.
+    
+    \item \textbf{Intégration et robustesse mécanique :} finalisation de l'intégration du module de pesée, validation de la résistance du cadre de tamisage aux vibrations prolongées et documentation du protocole de maintenance préventive.
+    
+    \item \textbf{Campagne terrain :} tests en conditions réelles sur des sites de collecte, avec mesures comparatives par rapport à des équipements de référence certifiés, validation en conditions environnementales extrêmes (température > 30~°C, humidité relative > 70~\%, exposition à la poussière).
+\end{itemize}
+
+\medskip
+
+En définitive, le projet SMART-SOJA illustre comment une démarche d'ingénierie mécatronique rigoureuse, associée aux technologies de l'Internet des objets et à une traçabilité numérique robuste, peut contribuer à améliorer la qualité des produits agricoles à chaque étape de la chaîne de valeur béninoise de la parcelle à l'usine.
+

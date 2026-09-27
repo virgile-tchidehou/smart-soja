@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART-SOJA | Connexion (Soutenance)</title>
+    <link rel="icon" href="/assets/smart_soja_logo_vertical.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+</head>
+
+<body class="auth-page">
+    <div class="auth-bg-gradient"></div>
+    <div class="auth-particles" id="particles"></div>
+
+
+
+    <div class="login-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <img src="/assets/smart_soja_logo_vertical.png" alt="Logo"
+                    style="height: 120px; margin-bottom: 1rem; object-fit: contain;">
+                <p class="brand-subtitle">Plateforme de Traçabilité & Qualité (Démo Soutenance)</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div id="errorMsg" class="error-msg hidden"></div>
+                <div id="successMsg" class="success-msg hidden"></div>
+
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" placeholder="•••••••••••" required>
+                        <button type="button" class="toggle-password-btn" data-target="password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="loginBtn" class="btn-primary">
+                    <span>Se connecter</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Pas encore de compte ? <a href="register.html">Créer un compte</a></p>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="/" style="color: #94A3B8; text-decoration: none; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton flottant de thème -->
+    <button class="floating-theme-toggle" id="theme-toggle-btn" title="Changer de thème" aria-label="Basculer le thème">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+    </button>
+
+    <script>
+        // Gestion du Thème (Inline pour réactivité immédiate)
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const STORAGE_KEY = 'smartsoja-theme';
+
+        const initTheme = () => {
+            const saved = localStorage.getItem(STORAGE_KEY) || 'light';
+            if (saved === 'light') document.body.classList.add('light-mode');
+            else document.body.classList.remove('light-mode');
+        };
+
+        themeBtn?.addEventListener('click', () => {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem(STORAGE_KEY, isLight ? 'light' : 'dark');
+        });
+
+        initTheme();
+    </script>
+
+    <script type="module" src="/src/js/controllers/auth.controller.js"></script>
+</body>
+
+</html>

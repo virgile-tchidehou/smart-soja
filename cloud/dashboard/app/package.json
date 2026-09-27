@@ -1,0 +1,23 @@
+{
+  "name": "smartsoja_platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "apexcharts": "^5.10.6",
+    "firebase": "^12.12.1",
+    "leaflet": "^1.9.4",
+    "lucide": "^1.11.0",
+    "mqtt": "^5.15.1",
+    "vite": "^8.0.10"
+  }
+}
