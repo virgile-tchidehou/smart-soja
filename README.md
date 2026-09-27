@@ -7,7 +7,7 @@
 ### An Autonomous IoT-Based Mobile Soybean Pre-processing System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
-![Status](https://img.shields.io/badge/Status-Functional%20Prototype-f6c343.svg)
+![Status](https://img.shields.io/badge/Status-Functional%20Proof%20of%20Concept-f6c343.svg)
 ![Platform](https://img.shields.io/badge/Platform-ESP32-3c3c3c.svg?logo=espressif&logoColor=white)
 ![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-e6522c.svg)
 [![Repo size](https://img.shields.io/github/repo-size/virgile-tchidehou/smart-soja.svg?color=blue)](https://github.com/virgile-tchidehou/smart-soja)
@@ -25,9 +25,9 @@
 
 ---
 
-SMART-SOJA is an engineering project that aims to improve soybean post-harvest processing through an autonomous, mobile and connected pre-processing unit.
+SMART-SOJA is an academic engineering project co-developed by **Elisa Christelle LOKO** and **Dodji Virgile TCHIDEHOU**. It explores a mobile and connected soybean pre-processing unit designed to improve post-harvest handling in rural environments.
 
-Designed for rural environments, the system combines embedded systems, industrial automation, IoT technologies and renewable energy to automate critical operations such as cleaning, moisture analysis, drying, weighing and digital traceability.
+The prototype combines embedded systems, industrial automation, IoT technologies and an off-grid solar/battery architecture. At its current stage, the project is a **functional proof of concept**: the main sensing, actuation, drying and IoT subsystems have been validated individually or in partial integration, while full-cycle validation under a real 2–5 kg load and final HX711 weighing integration remain future work.
 
 <div align="center">
 <img src="docs/images/smart-soja-hero.png" alt="SMART-SOJA prototype — assembled 3D view" width="640"/>
@@ -49,7 +49,7 @@ Designed for rural environments, the system combines embedded systems, industria
 - Documentation
 - Roadmap
 - Future Improvements
-- Author
+- Project Team
 - License
 
 ---
@@ -60,11 +60,11 @@ Soybean production is rapidly increasing across Africa, particularly in Benin. H
 
 SMART-SOJA addresses these challenges by providing a mobile cyber-physical system capable of:
 
-- Cleaning soybean grains
-- Measuring moisture content
-- Performing intelligent drying cycles
-- Weighing processed batches
-- Recording production data
+- Cleaning soybean grains through a vibrating sieve mechanism
+- Measuring grain moisture at two points
+- Controlling an active drying subsystem
+- Supporting final batch weighing through an HX711-based subsystem *(final integration pending)*
+- Recording production data locally
 - Synchronizing traceability data through MQTT
 
 The project integrates mechanical engineering, embedded electronics, industrial automation and cloud connectivity into a single modular platform.
@@ -93,20 +93,20 @@ The project aims to:
 - improve grain quality before storage;
 - reduce moisture-related losses;
 - provide digital traceability;
-- operate autonomously using solar energy;
+- support off-grid operation through a solar/battery power architecture;
 - support smart agriculture initiatives.
 
 ---
 
 # ✨ Key Features
 
-- 🌱 Autonomous mobile platform
+- 🌱 Mobile modular platform
 - 📡 IoT connectivity using MQTT
 - ⚙️ Embedded control with ESP32
-- ☀️ Solar-powered operation
+- ☀️ Solar/battery off-grid power architecture
 - 💧 Dual moisture sensing
-- 🔥 Intelligent drying control
-- ⚖️ Integrated weighing system
+- 🔥 Active drying control
+- ⚖️ HX711-based weighing subsystem *(final integration pending)*
 - 💾 Offline data logging (MicroSD)
 - ☁️ Cloud synchronization
 - 📊 Real-time monitoring
@@ -347,12 +347,15 @@ Future versions will integrate:
 
 <div align="center">
 
-# 👨‍💻 Author
+# 👥 Project Team
 
-**Dodji Virgile TCHIDEHOU**
+**Elisa Christelle LOKO** — Co-developer  
+**Dodji Virgile TCHIDEHOU** — Co-developer · repository maintainer
 
-Industrial Computing & Maintenance Engineer
-Embedded Systems • IoT • Robotics • Intelligent Systems
+Final-year project — Professional License in Industrial Computing & Maintenance, EGEI / UCAO-UUC, 2026.  
+Academic supervisor: **Dr DIDAVI Audace**
+
+This public repository is maintained by Dodji Virgile TCHIDEHOU and documents the team project together with the technical work contributed during its development.
 
 [![GitHub](https://img.shields.io/badge/GitHub-virgile--tchidehou-181717.svg?logo=github&logoColor=white)](https://github.com/virgile-tchidehou)
 
