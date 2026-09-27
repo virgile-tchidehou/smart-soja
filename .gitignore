@@ -42,3 +42,7 @@ mechanical/solidworks/**/*.SLDPRT
 mechanical/solidworks/**/*.sldprt
 mechanical/solidworks/**/*.SLDASM
 mechanical/solidworks/**/*.sldasm
+
+# --- Large generated / distributable artifacts ---
+cloud/dashboard/app/public/*.glb
+research/thesis/*.pdf

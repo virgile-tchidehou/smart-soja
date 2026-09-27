@@ -303,7 +303,7 @@ Full technical documentation lives in [`docs/`](docs/):
 | [08 – Results](docs/08-results.md) | Prototype outcomes, financial evaluation |
 | [09 – Future Improvements](docs/09-future-improvements.md) | Validation roadmap and product evolution |
 
-The full academic thesis (mémoire) this documentation is derived from is archived in [`research/thesis/`](research/thesis/).
+The technical documentation in this repository is derived from the academic thesis. The full thesis PDF is intentionally not distributed in the public repository; supporting figures and project material remain under [`research/thesis/`](research/thesis/).
 
 ---
 

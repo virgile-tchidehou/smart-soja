@@ -54,4 +54,4 @@ Le prototype est un **démonstrateur fonctionnel validé principalement par test
 - [04-mechanical-design.md](04-mechanical-design.md) — conception mécanique
 - [05-software-architecture.md](05-software-architecture.md) — firmware FreeRTOS, GRAFCET, plateforme web
 - [06-energy-system.md](06-energy-system.md) — dimensionnement solaire/batterie
-- [research/thesis/](../research/thesis/) — mémoire complet (source de cette documentation)
+- [research/thesis/](../research/thesis/) — figures et éléments de travail issus du mémoire ; le PDF complet n'est pas distribué dans le dépôt public

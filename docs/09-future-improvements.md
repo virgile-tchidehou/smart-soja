@@ -33,4 +33,4 @@ Au-delà des travaux de validation immédiats, plusieurs axes de développement 
 
 ## Conclusion
 
-Le projet SMART-SOJA démontre qu'une démarche d'ingénierie mécatronique rigoureuse — associée aux technologies IoT et à une traçabilité numérique robuste — peut contribuer à améliorer la qualité des produits agricoles à chaque étape de la chaîne de valeur béninoise, de la parcelle à l'usine. Le mémoire complet, incluant la revue de littérature et l'ensemble des annexes techniques, est disponible dans [`research/thesis/`](../research/thesis/).
+Le projet SMART-SOJA démontre qu'une démarche d'ingénierie mécatronique rigoureuse — associée aux technologies IoT et à une traçabilité numérique robuste — peut contribuer à améliorer la qualité des produits agricoles à chaque étape de la chaîne de valeur béninoise, de la parcelle à l'usine. Les figures et éléments de travail issus du mémoire sont conservés dans [`research/thesis/`](../research/thesis/). Le PDF complet n'est pas distribué dans le dépôt public.
