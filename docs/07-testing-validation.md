@@ -67,16 +67,16 @@ Aucun effondrement de tension observé pendant les cycles de test. Le système e
 | Critère | Résultat |
 |---|---|
 | Format et structure JSON | Conforme aux spécifications |
-| Publication MQTT | 100 % des messages transmis, aucune perte |
+| Publication MQTT | Aucune perte observée pendant les essais documentés en laboratoire |
 | Latence de transmission | 200–300 ms (labo) |
-| Intégrité des données | 100 % des champs corrects |
-| Sauvegarde locale (SD) | 100 % opérationnel (Store-and-Forward) |
+| Intégrité des données | Aucun payload invalide observé pendant les essais documentés |
+| Sauvegarde locale (SD) | Mécanisme Store-and-Forward validé sur banc de test |
 | Génération QR Code | 5/5 générés avec succès |
 
 ![QR Code généré](images/image_codeQR_genere.png)
 ![Certificat de traçabilité](images/image_doc_tracabilite.png)
 
-Le système génère automatiquement un tableau de bord de supervision, une interface de configuration, une étiquette de lot avec QR Code et un certificat/passeport numérique — l'ensemble de la chaîne documentaire est fonctionnel.
+Le système génère un tableau de bord de supervision, une interface de configuration, une étiquette de lot avec QR Code et un certificat/passeport numérique. Cette chaîne documentaire a été validée sur le banc de test utilisé pendant le projet.
 
 ## Banc d'intégration
 
@@ -96,4 +96,4 @@ Le système génère automatiquement un tableau de bord de supervision, une inte
 | Module de pesée (HX711) | ⏳ Intégration finale en cours |
 | Cycle complet nettoyage + séchage en charge réelle | ⏳ À valider (2–5 kg) |
 
-Tous les sous-systèmes sont validés individuellement et en intégration partielle. La chaîne complète (acquisition → traitement → affichage → transmission) est opérationnelle. Détail des limites et recommandations : [09-future-improvements.md](09-future-improvements.md).
+Les principaux sous-systèmes ont été validés individuellement et en intégration partielle. La chaîne numérique acquisition → traitement → affichage → transmission a fonctionné sur le banc de test ; cela ne constitue pas encore une validation du cycle mécanique complet sous charge réelle. Détail des limites et recommandations : [09-future-improvements.md](09-future-improvements.md).
