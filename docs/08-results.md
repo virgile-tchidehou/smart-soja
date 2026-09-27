@@ -13,8 +13,8 @@ Le détail des tests est présenté dans [07-testing-validation.md](07-testing-v
 1. **Acquisition de données** — DHT22 stable, sondes capacitives cohérentes avec l'état du soja, LCD fiable temps réel.
 2. **Traitement et pilotage** — l'ESP32 exécute correctement la logique de contrôle (actionneurs, interface, sauvegarde locale).
 3. **Actionneurs** — moteur de tamis, résistance chauffante, ventilateur et servomoteurs répondent tous correctement aux commandes.
-4. **Traçabilité numérique** — génération de QR Code et transmission MQTT fonctionnelles à 100 %, payloads JSON reçus sans erreur.
-5. **Fiabilité** — arrêt d'urgence instantané, sauvegarde locale en cas de déconnexion réseau (Store-and-Forward).
+4. **Traçabilité numérique** — génération de QR Code et transmission MQTT validées sur banc de test ; aucune perte de message ni payload JSON invalide n'a été observé pendant les essais documentés.
+5. **Fonctions de sûreté et continuité** — arrêt d'urgence et mécanisme de sauvegarde locale / Store-and-Forward testés dans le périmètre du banc de validation.
 
 ## Limites de la validation actuelle
 
