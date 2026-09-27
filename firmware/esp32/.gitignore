@@ -1,0 +1,7 @@
+# --- Secrets locaux (NE JAMAIS versionner) ---
+secrets.h
+
+# --- PlatformIO build artifacts ---
+.pio/
+.pioenvs/
+.piolibdeps/

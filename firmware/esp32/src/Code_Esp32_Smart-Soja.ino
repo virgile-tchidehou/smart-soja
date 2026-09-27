@@ -7,6 +7,7 @@
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#include "secrets.h"  // Credentials WiFi & MQTT — fichier local ignoré par git
 
 // ================= SERVOS =================
 Servo servoTremie;
@@ -21,12 +22,14 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 DHT dht(PIN_DHT, DHTTYPE);
 
 // ================= WIFI & MQTT =================
-const char *ssid = "Atchamou";
-const char *password = "Dodjiatchamou26";
-const char *mqtt_server = "9b78c87e5b10457c94878087b5bce6cd.s1.eu.hivemq.cloud";
-const int mqtt_port = 8883;
-const char *mqtt_user = "smartsoja";
-const char *mqtt_pass = "SmartSoja26@";
+// Les valeurs réelles sont dans src/secrets.h (ignoré par git).
+// Copier secrets.example.h → secrets.h et remplir avant de compiler.
+const char *ssid        = WIFI_SSID;
+const char *password    = WIFI_PASSWORD;
+const char *mqtt_server = MQTT_SERVER;
+const int   mqtt_port   = MQTT_PORT;
+const char *mqtt_user   = MQTT_USER;
+const char *mqtt_pass   = MQTT_PASSWORD;
 
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
