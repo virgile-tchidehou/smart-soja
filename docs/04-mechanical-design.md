@@ -2,9 +2,9 @@
 
 ![Vue modulaire 3D](images/Vue_modulaire_3D.PNG)
 
-Fichiers sources : [`mechanical/solidworks/Smart-Soja.STEP`](../mechanical/solidworks/Smart-Soja.STEP) (modèle 3D final de l'assemblage), [`mechanical/stl/`](../mechanical/stl/) (impression 3D), [`mechanical/drawings/`](../mechanical/drawings/) (découpe laser, mises en plan). Document de conception détaillé : [`mechanical/conception.md`](../mechanical/conception.md).
+Rendus et plans : [`mechanical/renders/`](../mechanical/renders/), [`mechanical/stl/`](../mechanical/stl/) (impression 3D), [`mechanical/drawings/`](../mechanical/drawings/) (découpe laser, mises en plan). Document de conception détaillé : [`mechanical/conception.md`](../mechanical/conception.md).
 
-> Le dépôt étant public, seul le rendu final assemblé (format STEP, neutre) est publié — les fichiers SolidWorks natifs de chaque pièce/sous-assemblage (`.SLDPRT`/`.SLDASM`) ne sont pas partagés.
+> Le dépôt étant public, les fichiers CAO SolidWorks (assemblage final et pièces détaillées) ne sont pas distribués ici — voir [`mechanical/solidworks/README.md`](../mechanical/solidworks/README.md) pour les obtenir sur demande.
 
 ## Architecture modulaire
 
