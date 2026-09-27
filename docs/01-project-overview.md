@@ -37,15 +37,15 @@ SMART-SOJA est une unité mobile qui combine :
 | Énergie | Panneau solaire 50 W + batterie plomb-acide 12 V/20 Ah, autonomie hors réseau |
 | IoT & traçabilité | MQTT + JSON, tableau de bord web, génération d'un passeport numérique par lot (QR Code) |
 
-Comparée au tri manuel (aucune mesure, aucune traçabilité) et aux unités industrielles importées (raccordement réseau/diesel, coût élevé), SMART-SOJA rapproche la technologie du producteur : autonomie solaire totale, mesure d'humidité précise par double sonde capacitive, et traçabilité numérique infalsifiable pour sécuriser l'entrée en usine.
+Comparée au tri manuel (peu ou pas de mesure instrumentée ni de traçabilité numérique) et aux unités industrielles plus lourdes, SMART-SOJA cherche à rapprocher les fonctions de pré-traitement du producteur : architecture énergétique hors réseau, double mesure capacitive de l'humidité et traçabilité numérique des lots.
 
 ## Origine du projet
 
-Le projet a été développé dans le cadre d'un stage de fin de cycle (Licence Professionnelle en Informatique Industrielle et Maintenance, EGEI/UCAO), réalisé chez **QOTTO Bénin**, entreprise spécialisée dans les systèmes solaires connectés hors-réseau. Cette immersion a directement nourri les choix de conception : dimensionnement énergétique, systèmes embarqués et maintenance électronique.
+Le projet a été co-développé par **Elisa Christelle LOKO** et **Dodji Virgile TCHIDEHOU** dans le cadre de leur projet de fin de cycle (Licence Professionnelle en Informatique Industrielle et Maintenance, EGEI/UCAO-UUC), sous la supervision du **Dr DIDAVI Audace**. Le travail a été mené dans le contexte du stage académique chez **QOTTO Bénin**, dont l'environnement technique a nourri plusieurs choix de conception liés à l'énergie, aux systèmes embarqués et à la maintenance électronique.
 
 ## État d'avancement (juin 2026)
 
-Le prototype est un **démonstrateur fonctionnel validé en tests unitaires** : chaque sous-système (capteurs, moteurs, séchage, transmission MQTT, génération de QR Code) fonctionne correctement pris individuellement, avec une transmission MQTT à 100 % d'intégrité et zéro perte de message. Restent à valider avant déploiement : le cycle complet nettoyage + séchage en charge réelle (2 à 5 kg), l'intégration finale du module de pesée (HX711), et la robustesse en conditions de terrain. Voir [08-results.md](08-results.md) pour le détail des résultats et [09-future-improvements.md](09-future-improvements.md) pour la feuille de route.
+Le prototype est un **démonstrateur fonctionnel validé principalement par tests unitaires et intégration partielle** : les principaux sous-systèmes (capteurs, moteurs, séchage, transmission MQTT, génération de QR Code) ont été vérifiés individuellement. Lors des essais MQTT documentés en laboratoire, aucune perte de message ni payload invalide n'a été observé. Restent à valider avant tout déploiement : le cycle complet nettoyage + séchage en charge réelle (2 à 5 kg), l'intégration finale du module de pesée (HX711), l'autonomie sur cycle complet et la robustesse en conditions de terrain. Voir [08-results.md](08-results.md) pour le détail des résultats et [09-future-improvements.md](09-future-improvements.md) pour la feuille de route.
 
 ## Pour aller plus loin
 
