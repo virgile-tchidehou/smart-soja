@@ -4,4 +4,4 @@ Le modèle CAO complet (assemblage final `Smart-Soja.STEP` ainsi que les pièces
 
 Pour consulter les rendus et vues techniques, voir [`mechanical/renders/`](../renders/) et [`mechanical/drawings/`](../drawings/), ainsi que [04-mechanical-design.md](../../docs/04-mechanical-design.md).
 
-Pour un accès aux fichiers sources, contacter l'auteur — voir la section [Author](../../README.md#-author) du README.
+Pour un accès aux fichiers sources, contacter le mainteneur du dépôt — voir la section [Project Team](../../README.md#-project-team) du README.
