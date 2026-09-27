@@ -34,3 +34,11 @@ fp-info-cache
 .DS_Store
 Thumbs.db
 .vscode/
+
+# --- Large native CAD sources (kept outside the public repository) ---
+mechanical/solidworks/**/*.STEP
+mechanical/solidworks/**/*.step
+mechanical/solidworks/**/*.SLDPRT
+mechanical/solidworks/**/*.sldprt
+mechanical/solidworks/**/*.SLDASM
+mechanical/solidworks/**/*.sldasm
